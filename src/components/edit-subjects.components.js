@@ -75,6 +75,12 @@ export default class EditSubject extends Component {
     });
   }
 
+  onChangeUser(e) {
+    this.setState({
+      user: e.target.value,
+    });
+  }
+
   onSubmit(e) {
     e.preventDefault();
 
