@@ -8,6 +8,13 @@ export default class CreateSubjects extends Component {
     super(props);
 
     this.onChangeUsername = this.onChangeUsername.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
+
+    this.state = {
+      username: "",
+    };
+
+    this.onChangeUsername = this.onChangeUsername.bind(this);
     this.onChangeDescription = this.onChangeDescription.bind(this);
     this.onChangeDuration = this.onChangeDuration.bind(this);
     this.onChangeDate = this.onChangeDate.bind(this);
@@ -22,7 +29,7 @@ export default class CreateSubjects extends Component {
     };
   }
 
-  componentDidMount() {
+  /* componentDidMount() {
     axios.get("http://localhost:4000/users/").then((response) => {
       if (response.data.length > 0) {
         this.setState({
@@ -31,7 +38,7 @@ export default class CreateSubjects extends Component {
         });
       }
     });
-  }
+  } */
 
   onChangeUsername(e) {
     this.setState({
@@ -56,7 +63,6 @@ export default class CreateSubjects extends Component {
       date: date,
     });
   }
-  //1:29:22
 
   onChangeUsers(e) {
     this.setState({
@@ -86,26 +92,27 @@ export default class CreateSubjects extends Component {
   render() {
     return (
       <div>
-        <h3>Create New Subject Log</h3>
+        <h3>Sign Up</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group'">
             <label>Username: </label>
-            <select
-              ref="userInput"
+            <input
+              type="text"
               required
               className="form-control"
               value={this.state.username}
               onChange={this.onChangeUsername}
             >
-              {this.state.users.map(function (user) {
+              {/*this.state.users.map(function (user) {
                 return (
                   <option key={user} value={user}>
                     {user}
                   </option>
                 );
-              })}
-            </select>
+              })*/}
+            </input>
           </div>
+
           <div className="form-group">
             <label>Description: </label>
             <input
@@ -133,6 +140,19 @@ export default class CreateSubjects extends Component {
                 onChange={this.onChangeDate}
               />
             </div>
+          </div>
+          <div className="form-group">
+            <lable>User Type:</lable>
+            <select
+              className="form-control"
+              id="userInput"
+              value={this.state.user}
+              onChange={this.onChangeUser}
+            >
+              <option selected>Choose...</option>
+              <option value="tutor">Tutor</option>
+              <option value="student">Student</option>
+            </select>
           </div>
 
           <div className="form-group">
