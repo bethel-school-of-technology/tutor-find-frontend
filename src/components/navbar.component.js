@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import ReactSearchBox from 'react-search-box'
+
 
 export default class Navbar extends Component {
   render() {
@@ -28,9 +30,17 @@ export default class Navbar extends Component {
                 Tutor Sessions
               </Link>
             </li>
+            <li className="navbar-item">
+              <Link to="/sessions" className="nav-link">
+                Search bar
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
     );
+    }
+  
+   
   }
-}
+
