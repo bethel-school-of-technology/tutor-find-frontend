@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import ReactSearchBox from 'react-search-box';
 
 const Subject = (props) => (
   <tr>
@@ -68,18 +69,44 @@ export default class SubjectsList extends Component {
       <div>
         <h3>Subjects List</h3>
         <table className="table">
+       
           <thead className="thead-light">
-            <tr>
+            <ul>
               <th> Username </th>
-              <th> Description </th>
+              <th>
+                <ReactSearchBox
+                  placeholder="search user"
+                  value=""
+                  data={this.data}
+                  callback={record => console.log(record)} />
+              </th>
+              <th> Subject </th>
+              <th>
+                <ReactSearchBox
+                  placeholder="search subject"
+                  value=""
+                  data={this.data}
+                  callback={record => console.log(record)} />
+
+              </th>
               <th> Duration</th>
-              <th>Date</th>
-              <th>Actions</th>
-            </tr>
+              <th>
+                <ReactSearchBox
+                  placeholder="search duration"
+                  value=""
+                  data={this.data}
+                  callback={record => console.log(record)} />
+              </th>
+
+              {/* <th>Date</th>
+              <th>Actions</th> */}
+            </ul>
           </thead>
           <tbody>{this.subjectList()}</tbody>
+          
         </table>
       </div>
+
     );
   }
 }

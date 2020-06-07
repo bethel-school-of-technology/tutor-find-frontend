@@ -10,4 +10,19 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+  
 }
+html {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: smaller;
+  
+}
+table{
+  background-color: blueviolet;
+}
+h3{
+  font-style: italic;
+}
+
+
+
