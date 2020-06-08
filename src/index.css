@@ -12,6 +12,32 @@ code {
     monospace;
 }
 
-html {
-  background-image: url("https://images2.minutemediacdn.com/image/upload/c_crop,h_1778,w_3155,x_0,y_843/f_auto,q_auto,w_1100/v1554928552/shape/mentalfloss/540093-istock-514343279.jpg");
+h3{
+  font-style: italic;
 }
+myInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+ul{
+  font-size: medium;
+}
+* {
+  background-color: rgb(192, 222, 240);
+  flex-direction: column;
+  /* background-image: url("https://www.google.com/imgres?imgurl=https%3A%2F%2Flookaside.fbsbx.com%2Flookaside%2Fcrawler%2Fmedia%2F%3Fmedia_id%3D762494917566522&imgrefurl=https%3A%2F%2Fwww.facebook.com%2FStudentingWorld%2F&tbnid=GHQi4M7afG-JIM&vet=12ahUKEwj4otatkPHpAhUujK0KHWezAfsQMygLegUIARCrAQ..i&docid=z1oNcQOzFh7WhM&w=960&h=365&q=images%20of%20studenting&ved=2ahUKEwj4otatkPHpAhUujK0KHWezAfsQMygLegUIARCrAQ"); */
+  
+}
+li{
+  background-color: teal;
+}
+h3{
+  font-style: italic;
+}
+
