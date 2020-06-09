@@ -8,14 +8,16 @@ import SubjectList from "./components/subjects-list.component";
 import EditSubject from "./components/edit-subjects.components";
 import CreateSubject from "./components/create-subject.component";
 import CreateUser from "./components/create-user.component";
-
+import HomePage from "./components/HomePage";
+ 
 function App() {
   return (
     <Router>
       <div className="container">
         <Navbar />
         <br />
-        <Route path="/" exact component={SubjectList} />
+        <Route path="/" exact component={HomePage} />
+        <Route path="/subjects-list" component={SubjectList}/>
         <Route path="/edit/:id" component={EditSubject} />
         <Route path="/create" component={CreateSubject} />
         <Route path="/user" exct component={CreateUser} />
