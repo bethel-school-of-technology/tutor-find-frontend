@@ -28,12 +28,16 @@ myInput {
 ul{
   font-size: medium;
 }
+*{
+   background-color: rgb(192, 222, 240);
+}
 html {
   /* background-color: rgb(192, 222, 240); */
   /* flex-direction: column; */
-  background-image: url('https://inteng-storage.s3.amazonaws.com/img/iea/PrO3onAKOq/sizes/new-project-1_resize_md.jpg');
+  background-image: url('https://p0.pxfuel.com/preview/745/1018/433/aerial-background-empty-blogger.jpg');
   background-repeat:no-repeat;
   background-size:cover;
+  
 }
 
 li{

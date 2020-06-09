@@ -5,6 +5,8 @@ export default class HomePage extends Component {
     return (
       <div className="homepage">
         { this.props.children }
+        
+
       </div>
     )
   }
