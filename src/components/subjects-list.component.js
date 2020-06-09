@@ -4,10 +4,9 @@ import axios from "axios";
 
 const Subject = (props) => (
   <tr>
-    <td>{props.subject.username}</td>
+    <td>{props.subject.subject}</td>
     <td>{props.subject.description}</td>
     <td>{props.subject.duration}</td>
-    <td>{props.subject.date.substring(0, 10)}</td>
     <td>
       <Link to={"/edit/" + props.subject._id}>edit</Link> |{" "}
       <button
@@ -70,11 +69,11 @@ export default class SubjectsList extends Component {
         <table className="table">
           <thead className="thead-light">
             <tr>
-              <th> Username </th>
-              <th><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for users..." title="Type in a user"></input></th>
+              <th> Subject </th>
+              <th><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for subject..." title="Type in a user"></input></th>
               
               <th> Description </th>
-              <th><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for subject..." title="Type in a subject"></input></th>
+              <th><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for description..." title="Type in a subject"></input></th>
               <th> Duration</th>
               <th><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for duration.." title="Type in duration"></input></th>
              
