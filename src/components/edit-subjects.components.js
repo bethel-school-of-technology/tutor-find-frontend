@@ -7,17 +7,15 @@ export default class EditSubject extends Component {
   constructor(props) {
     super(props);
 
-    this.onChangeUsername = this.onChangeUsername.bind(this);
+    this.onChangeSubject = this.onChangeSubject.bind(this);
     this.onChangeDescription = this.onChangeDescription.bind(this);
     this.onChangeDuration = this.onChangeDuration.bind(this);
-    this.onChangeDate = this.onChangeDate.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
-      username: "",
+      subject: "",
       description: "",
       duration: 0,
-      date: new Date(),
       users: [],
     };
   }
@@ -27,7 +25,7 @@ export default class EditSubject extends Component {
       .get("http://localhost:4000/subjects/" + this.props.match.params.id)
       .then((response) => {
         this.setState({
-          username: response.data.username,
+          subject: response.data.subject,
           description: response.data.description,
           duration: response.data.duration,
           date: new Date(response.data.date),
@@ -51,9 +49,9 @@ export default class EditSubject extends Component {
       });
   }
 
-  onChangeUsername(e) {
+  onChangeSubject(e) {
     this.setState({
-      username: e.target.value,
+      subject: e.target.value,
     });
   }
 
@@ -69,12 +67,6 @@ export default class EditSubject extends Component {
     });
   }
 
-  onChangeDate(date) {
-    this.setState({
-      date: date,
-    });
-  }
-
   onChangeUser(e) {
     this.setState({
       user: e.target.value,
@@ -85,10 +77,9 @@ export default class EditSubject extends Component {
     e.preventDefault();
 
     const subject = {
-      username: this.state.username,
+      subject: this.state.subject,
       description: this.state.description,
       duration: this.state.duration,
-      date: this.state.date,
     };
 
     console.log(subject);
@@ -109,13 +100,13 @@ export default class EditSubject extends Component {
         <h3>Edit Subject List</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group">
-            <label>Username: </label>
+            <label>Subject: </label>
             <select
               ref="userInput"
               required
               className="form-control"
-              value={this.state.username}
-              onChange={this.onChangeUsername}
+              value={this.state.subject}
+              onChange={this.onChangeSubject}
             >
               {this.state.users.map(function (user) {
                 return (
@@ -144,15 +135,6 @@ export default class EditSubject extends Component {
               value={this.state.duration}
               onChange={this.onChangeDuration}
             />
-          </div>
-          <div className="form-group">
-            <label>Date: </label>
-            <div>
-              <DatePicker
-                selected={this.state.date}
-                onChange={this.onChangeDate}
-              />
-            </div>
           </div>
 
           <div className="form-group">
