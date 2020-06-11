@@ -67,15 +67,27 @@ export default class SubjectsList extends Component {
     return (
       <div>
         <h3>Subjects List</h3>
+        
         <table className="table">
-          <thead className="thead-light">
+         
+        <thead className="thead-light">
             <tr>
               <th> Username </th>
+              <th><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for users..." title="Type in a user"></input></th>
+
               <th> Description </th>
-              <th> Duration</th>
-              <th>Date</th>
-              <th>Actions</th>
+              <th><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for subject..." title="Type in a subject"></input></th>
+             
+              <th>Time</th>
+              <th><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for duration.." title="Type in duration"></input></th>
+
+              {/* <th>Date</th>
+              <th>Actions</th> */}
+
+
+                <th><button id="myBtn" onclick="javascript:alert('Hello World!')">submit</button></th>
             </tr>
+
           </thead>
           <tbody>{this.subjectList()}</tbody>
         </table>
