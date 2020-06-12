@@ -10,7 +10,7 @@ export default class Navbar extends Component {
       
        
         <div className="collpase navbar-collapse">
-        <img className="navimg" src="https://image.shutterstock.com/z/stock-vector-fire-flame-orange-logo-template-1701229432.jpg" />
+        <img className="navimg" src="https://i.ibb.co/YZDRqDw/tutorfindlogo.jpg" />
           <ul className="navbar-nav mr-auto">
           <li className="navbar-item">
           <Link to="/home" className="nav-link">
