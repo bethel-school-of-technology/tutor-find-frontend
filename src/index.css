@@ -1,5 +1,6 @@
 * {
-  color: turquoise;
+  color: rgb(15, 15, 15);
+
 }
 body {
   margin: 0;
@@ -34,6 +35,8 @@ myInput {
 }
 ul{
   font-size: medium;
+  
+
 }
 
 .navbar {
@@ -42,21 +45,26 @@ ul{
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: .9;
+  opacity: .8;
   
 }
 .navbar-nav {
   width: 80em;
   height: 3em;
-  margin-left: 3.5em;
+  margin-left: 10em;
+  align-items: center;
 }
 
 .navbar-item {
-  background-color: rgb(117, 115, 115);
+  background-color: rgb(153, 149, 147);
   font-size: large;
+  padding-right: 50px;
+  padding-left: 20px;
+
 }
 
 .nav-link {
+  
   
 }
 
@@ -67,12 +75,50 @@ ul{
 .navimg {
   height: 4em;
   width: 4em;
+  
+
 
 }
 li{
-  background-color: teal;
+  background-color: rgb(144, 212, 212);
+  text-align: right;
+  flex-direction: column;
+  
 }
 h3{
   font-style: italic;
+  
 }
+
+  
+/* 
+p{
+  font-weight: 400;
+
+} */
+.homepage{
+  background-color: transparent;
+  opacity: .8;
+  text-align: right;
+  padding-top: 1px;
+  padding-bottom: 10%;
+  padding-left: 90mm;
+  margin: 10%;
+  
+}
+
+
+
+lu{
+ 
+  font-family: monospace;
+  font-size: 22px;
+  background-color: transparent;
+  
+  
+
+
+}
+
+
 
