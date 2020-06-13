@@ -13,30 +13,30 @@ export default class Navbar extends Component {
         <img className="navimg" src="https://i.ibb.co/YZDRqDw/tutorfindlogo.jpg" />
           <ul className="navbar-nav mr-auto">
           <li className="navbar-item">
-          <Link to="/home" className="nav-link">
+          <Link to="/" className="nav-link">
           Home
         </Link>
           </li>
-            <li className="navbar-item">
             
-              <Link to="/create" className="nav-link">
-                Sign Up
-              </Link>
-            </li>
             <li className="navbar-item">
               <Link to="/subjects-list" className="nav-link">
               
-                Subjects
+                Search
               </Link>
             </li>
            
             <li className="navbar-item">
               <Link to="/sessions" className="nav-link">
                 {" "}
-                Tutor Sessions
+                Tutor Services
               </Link>
             </li>
-            
+
+            <li className="navbar-item">
+              <Link to="/create" className="nav-link">
+                Post
+              </Link>
+            </li>
             
            
           </ul>
