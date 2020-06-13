@@ -68,8 +68,12 @@ export default class CreateSubjects extends Component {
 
   render() {
     return (
-      <div>
-        <h3>Subject Log</h3>
+      <div className="page">
+      <div className="create-header">
+        <h3>Post Your Tutor Service</h3>
+        <div>Create a post with your service information to display to potential students.</div>
+        <br></br>
+        </div>
         <form onSubmit={this.onSubmit}>
           <div className="form-group'">
             <label>Username: </label>

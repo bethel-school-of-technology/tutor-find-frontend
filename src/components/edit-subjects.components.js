@@ -13,22 +13,23 @@ export default class EditSubject extends Component {
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
+      username: "",
       subject: "",
       description: "",
       duration: 0,
-      users: [],
+      users: []
     };
   }
 
   componentDidMount() {
     axios
-      .get("http://localhost:4000/subjects/" + this.props.match.params.id)
-      .then((response) => {
+      .get("http://localhost:7000/subjects/" + this.props.match.params.id)
+      .then(response => {
         this.setState({
+          username: response.data.username,
           subject: response.data.subject,
           description: response.data.description,
-          duration: response.data.duration,
-          date: new Date(response.data.date),
+          duration: response.data.duration
         });
       })
       .catch(function (error) {
@@ -36,15 +37,15 @@ export default class EditSubject extends Component {
       });
 
     axios
-      .get("http://localhost:4000/users/")
-      .then((response) => {
+      .get("http://localhost:7000/users/")
+      .then(response => {
         if (response.data.length > 0) {
           this.setState({
-            users: response.data.map((user) => user.username),
+            users: response.data.map(user => user.username),
           });
         }
       })
-      .catch((error) => {
+      .catch(error => {
         console.log(error);
       });
   }
@@ -67,16 +68,12 @@ export default class EditSubject extends Component {
     });
   }
 
-  onChangeUser(e) {
-    this.setState({
-      user: e.target.value,
-    });
-  }
 
   onSubmit(e) {
     e.preventDefault();
 
     const subject = {
+      username: this.state.username,
       subject: this.state.subject,
       description: this.state.description,
       duration: this.state.duration,
@@ -86,17 +83,17 @@ export default class EditSubject extends Component {
 
     axios
       .post(
-        "http://localhost:4000/subjects/update/" + this.props.match.params.id,
+        "http://localhost:7000/subjects/update/" + this.props.match.params.id,
         subject
       )
       .then((res) => console.log(res.data));
 
-    window.location = "/";
+    window.location = "/sessions";
   }
 
   render() {
     return (
-      <div>
+      <div className="page">
         <h3>Edit Subject List</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group">
@@ -118,9 +115,20 @@ export default class EditSubject extends Component {
             </select>
           </div>
           <div className="form-group">
-            <label>Description: </label>
+            <label>Subject: </label>
             <input
               type="text"
+              required
+              className="form-control"
+              value={this.state.subject}
+              onChange={this.onChangeSubject}
+            />
+          </div>
+          <div className="form-group">
+            <label>Description: </label>
+            <textarea
+              row={3}
+              col={3}
               required
               className="form-control"
               value={this.state.description}

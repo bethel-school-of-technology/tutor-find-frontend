@@ -9,8 +9,11 @@ const Subject = props => (
     <td>{props.subject.description}</td>
     <td>{props.subject.duration}</td>
     <td>
-      <Link to={"/edit/" + props.subject._id}>edit</Link> |
-      <a href="#" onClick={() => { props.deleteSubject(props.subject._id) }}>delete
+      <Link to={"/edit/" + props.subject._id}>Edit</Link>&nbsp;|&nbsp;
+      <a href="#"
+      onClick={() => { props.deleteSubject(props.subject._id) 
+      }}>
+        Delete
       </a>
     </td>
   </tr>
@@ -63,15 +66,16 @@ export default class SubjectsList extends Component {
 
   render() {
     return (
-      <div>
-        <h3>Subjects List</h3>
+      <div className="page">
+        <h3 className="create-header">Tutor Services</h3>
+        <br></br>
         <table className="table">
           <thead className="thead-light">
             <tr>
               <th> Username </th>
               <th> Subject</th>
               <th> Description </th>
-              <th> Duration</th>
+              <th> Minutes</th>
               <th>Actions</th>
             </tr>
           </thead>
