@@ -1,124 +1,140 @@
 * {
-  color: rgb(15, 15, 15);
-
+    color: rgb(15, 15, 15);
 }
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-image: url('https://p0.pxfuel.com/preview/745/1018/433/aerial-background-empty-blogger.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: url("https://p0.pxfuel.com/preview/745/1018/433/aerial-background-empty-blogger.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-    
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-h3{
-  font-style: italic;
+h3 {
+    font-style: italic;
 }
+
 myInput {
-  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
-  background-position: 10px 12px; /* Position the search icon */
-  background-repeat: no-repeat; /* Do not repeat the icon image */
-  width: 100%; /* Full-width */
-  font-size: 16px; /* Increase font-size */
-  padding: 12px 20px 12px 40px; /* Add some padding */
-  border: 1px solid #ddd; /* Add a grey border */
-  margin-bottom: 12px; /* Add some space below the input */
+    background-image: url("/css/searchicon.png");
+    /* Add a search icon to input */
+    background-position: 10px 12px;
+    /* Position the search icon */
+    background-repeat: no-repeat;
+    /* Do not repeat the icon image */
+    width: 100%;
+    /* Full-width */
+    font-size: 16px;
+    /* Increase font-size */
+    padding: 12px 20px 12px 40px;
+    /* Add some padding */
+    border: 1px solid #ddd;
+    /* Add a grey border */
+    margin-bottom: 12px;
+    /* Add some space below the input */
 }
-ul{
-  font-size: medium;
-  
 
+ul {
+    font-size: medium;
 }
 
 .navbar {
-  margin-left: calc(50% - 50vw);
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: .8;
-  
+    margin-left: calc(50% - 50vw);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
 }
+
 .navbar-nav {
-  width: 80em;
-  height: 3em;
-  margin-left: 10em;
-  align-items: center;
+    width: 80em;
+    height: 3em;
+    margin-left: 10em;
+    align-items: center;
 }
 
 .navbar-item {
-  background-color: rgb(153, 149, 147);
-  font-size: large;
-  padding-right: 50px;
-  padding-left: 20px;
-
-}
-
-.nav-link {
-  
-  
+    background-color: rgb(153, 149, 147);
+    font-size: large;
+    padding-right: 50px;
+    padding-left: 20px;
 }
 
 .navbar-item:hover {
-  background-color: navajowhite;
+    background-color: navajowhite;
 }
 
 .navimg {
-  height: 4em;
-  width: 4em;
-  
-
-
-}
-li{
-  background-color: rgb(144, 212, 212);
-  text-align: right;
-  flex-direction: column;
-  
-}
-h3{
-  font-style: italic;
-  
+    height: 4em;
+    width: 4em;
 }
 
-  
+li {
+    background-color: rgb(144, 212, 212);
+    text-align: right;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    font-style: italic;
+}
+
+
 /* 
 p{
   font-weight: 400;
 
 } */
-.homepage{
-  background-color: transparent;
-  opacity: .8;
-  text-align: right;
-  padding-top: 1px;
-  padding-bottom: 10%;
-  padding-left: 90mm;
-  margin: 10%;
-  
+
+.homepage {
+    background-color: transparent;
+    opacity: 0.8;
+    text-align: right;
+    padding-top: 1px;
+    padding-bottom: 10%;
+    padding-left: 90mm;
+    margin: 10%;
 }
 
-
-
-lu{
- 
-  font-family: monospace;
-  font-size: 22px;
-  background-color: transparent;
-  
-  
-
-
+ul {
+    font-family: monospace;
+    font-size: 22px;
+    background-color: transparent;
 }
 
+.text {
+    background-color: darkgray;
+    display: table;
+    padding: 20px;
+    float: right;
+}
 
+.joe {
+    text-align: center;
+    color: white;
+    text-shadow: 10px 10px black;
+    padding: 15px;
+}
 
+.chris {
+    text-align: center;
+    color: white;
+    text-shadow: 5px 5px black;
+    padding: 25px;
+}
+
+.kyle {
+    text-align: center;
+    background-color: #cca300;
+    display: table;
+    margin: 0px auto 0px auto;
+    padding: 20px;
+}
