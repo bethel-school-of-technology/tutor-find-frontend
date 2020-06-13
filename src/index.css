@@ -94,6 +94,12 @@ p{
 
 } */
 
+.page {
+    background-color: white;
+    opacity: .97;
+    padding: 2em;
+}
+
 .homepage {
     background-color: transparent;
     opacity: 0.8;
@@ -137,4 +143,8 @@ ul {
     display: table;
     margin: 0px auto 0px auto;
     padding: 20px;
+}
+
+.create-header {
+    text-align: center;
 }
