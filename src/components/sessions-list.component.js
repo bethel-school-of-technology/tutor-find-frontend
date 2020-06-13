@@ -2,62 +2,60 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-const Sessions = (props) => (
+const Subject = props => (
   <tr>
-    <td>{props.sessions.username}</td>
-    <td>{props.sessions.minutes}</td>
-    <td>{props.sessions.duration}</td>
-    <td>{props.sessions.date.substring(0, 10)}</td>
+    <td>{props.subject.username}</td>
+    <td>{props.subject.subject}</td>
+    <td>{props.subject.description}</td>
+    <td>{props.subject.duration}</td>
     <td>
-      <Link to={"/edit/" + props.sessions._id}>edit</Link> |{" "}
-      <button
-        onClick={() => {
-          props.deleteSessions(props.sessions._id);
-        }}
-      >
-        delete
-      </button>
+      <Link to={"/edit/" + props.subject._id}>edit</Link> |
+      <a href="#" onClick={() => { props.deleteSubject(props.subject._id) }}>delete
+      </a>
     </td>
   </tr>
 );
 
-export default class SessionsList extends Component {
+export default class SubjectsList extends Component {
   constructor(props) {
     super(props);
 
-    this.deleteSessions = this.deleteSessions.bind(this);
+    this.deleteSubject = this.deleteSubject.bind(this);
 
-    this.state = { sessions: [] };
+    this.state = { subjects: [] };
+
+    
   }
+
 
   componentDidMount() {
     axios
-      .get("http://localhost:4000/sessions/")
-      .then((response) => {
-        this.setState({ sessions: response.data });
+      .get("http://localhost:7000/subjects/")
+      .then(response => {
+        this.setState({ subjects: response.data });
       })
       .catch((error) => {
         console.log(error);
-      });
+      })
   }
 
-  deleteSessions(id) {
+  deleteSubject(id) {
     axios
-      .delete("http://localhost:4000/sessions/" + id)
-      .then((res) => console.log(res.data));
+      .delete("http://localhost:7000/subjects/" + id)
+      .then(res => console.log(res.data));
 
     this.setState({
-      sessions: this.state.sessions.filter((el) => el._id !== id),
+      subjects: this.state.subjects.filter(el => el._id !== id),
     });
   }
 
-  sessionsList() {
-    return this.state.sessions.map((currentSessions) => {
+  subjectsList() {
+    return this.state.subjects.map(currentSubject => {
       return (
-        <Sessions
-          Sessions={currentSessions}
-          deleteSessions={this.deleteSessions}
-          key={currentSessions._id}
+        <Subject
+          subject={currentSubject}
+          deleteSessions={this.deleteSubjects}
+          key={currentSubject._id}
         />
       );
     });
@@ -66,18 +64,20 @@ export default class SessionsList extends Component {
   render() {
     return (
       <div>
-        <h3>Sessions List</h3>
+        <h3>Subjects List</h3>
         <table className="table">
           <thead className="thead-light">
             <tr>
               <th> Username </th>
+              <th> Subject</th>
               <th> Description </th>
-              <th> Minutes</th>
-              <th>Date</th>
+              <th> Duration</th>
               <th>Actions</th>
             </tr>
           </thead>
-          <tbody>{this.sessionsList()}</tbody>
+            <tbody>
+              {this.subjectsList()}
+            </tbody>
         </table>
       </div>
     );

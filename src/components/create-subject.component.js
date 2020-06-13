@@ -8,41 +8,29 @@ export default class CreateSubjects extends Component {
     super(props);
 
     this.onChangeUsername = this.onChangeUsername.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
-
-    this.state = {
-      username: "",
-    };
-
-    this.onChangeUsername = this.onChangeUsername.bind(this);
+    this.onChangeSubject = this.onChangeSubject.bind(this);
     this.onChangeDescription = this.onChangeDescription.bind(this);
     this.onChangeDuration = this.onChangeDuration.bind(this);
-    this.onChangeDate = this.onChangeDate.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
       username: "",
+      subject: "",
       description: "",
       duration: 0,
-      date: new Date(),
-      users: [],
-    };
+    }
+ 
   }
-
-  /* componentDidMount() {
-    axios.get("http://localhost:4000/users/").then((response) => {
-      if (response.data.length > 0) {
-        this.setState({
-          users: response.data.map((user) => user.username),
-          username: response.data[0].username,
-        });
-      }
-    });
-  } */
 
   onChangeUsername(e) {
     this.setState({
       username: e.target.value,
+    });
+  }
+
+  onChangeSubject(e) {
+    this.setState({
+      subject: e.target.value,
     });
   }
 
@@ -58,41 +46,30 @@ export default class CreateSubjects extends Component {
     });
   }
 
-  onChangeDate(date) {
-    this.setState({
-      date: date,
-    });
-  }
-
-  onChangeUsers(e) {
-    this.setState({
-      users: e.target.value,
-    });
-  }
 
   onSubmit(e) {
     e.preventDefault();
 
     const subject = {
       username: this.state.username,
+      subject: this.state.subject,
       description: this.state.description,
-      duration: this.state.duration,
-      date: this.state.date,
+      duration: this.state.duration
     };
 
     console.log(subject);
 
     axios
-      .post("http://localhost:4000/subjects/add", subject)
+      .post("http://localhost:7000/subjects/add", subject)
       .then((res) => console.log(res.data));
 
-    window.location = "/";
+      window.location = "/sessions";
   }
 
   render() {
     return (
       <div>
-        <h3>Sign Up</h3>
+        <h3>Subject Log</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group'">
             <label>Username: </label>
@@ -102,22 +79,24 @@ export default class CreateSubjects extends Component {
               className="form-control"
               value={this.state.username}
               onChange={this.onChangeUsername}
-            >
-              {/*this.state.users.map(function (user) {
-                return (
-                  <option key={user} value={user}>
-                    {user}
-                  </option>
-                );
-              })*/}
-            </input>
+            />
           </div>
 
           <div className="form-group">
-            <label>Description: </label>
+            <label>Subject: </label>
             <input
               type="text"
               required
+              className="form-control"
+              value={this.state.subject}
+              onChange={this.onChangeSubject}
+            />
+          </div>
+          <div className="form-group">
+            <label>Description: </label>
+            <textarea
+              rows={3}
+              cols={5}
               className="form-control"
               value={this.state.description}
               onChange={this.onChangeDescription}
@@ -132,28 +111,6 @@ export default class CreateSubjects extends Component {
               onChange={this.onChangeDuration}
             />
           </div>
-          <div className="form-group">
-            <label>Date: </label>
-            <div>
-              <DatePicker
-                selected={this.state.date}
-                onChange={this.onChangeDate}
-              />
-            </div>
-          </div>
-          <div className="form-group">
-            <lable>User Type:</lable>
-            <select
-              className="form-control"
-              id="userInput"
-              value={this.state.user}
-              onChange={this.onChangeUser}
-            >
-              <option selected>Choose...</option>
-              <option value="tutor">Tutor</option>
-              <option value="student">Student</option>
-            </select>
-          </div>
 
           <div className="form-group">
             <input
@@ -167,3 +124,4 @@ export default class CreateSubjects extends Component {
     );
   }
 }
+
