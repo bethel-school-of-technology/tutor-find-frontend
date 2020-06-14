@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export default class HomePage extends Component {
   render() {
@@ -33,7 +34,11 @@ export default class HomePage extends Component {
         
         </h3>
         <p></p>
-        <h4> <button onclick="document.getElementById('id01').style.display='block'">Sign Up</button></h4>
+        <h4> 
+          <Link to="/Register">
+            <button type="submit">Sign Up</button>
+          </Link>
+        </h4>
         
       </div>
       
