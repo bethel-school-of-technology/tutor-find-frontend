@@ -24,16 +24,25 @@ export default class HomePage extends Component {
         <h3 className="text">
           {" "}
           The goal is to bring people together in their communities with common
-          interests, peace and the love for helping people.{" "}
+          interests, peace and the love for helping people. <p></p>
+          {" "}
+        </h3>
+        <h3 className="text">
+        {"  "}
+        Connect with a tutor today and be on your way to sucess.
+        
         </h3>
         <p></p>
+        <h4> <button onclick="document.getElementById('id01').style.display='block'">Sign Up</button></h4>
+        
       </div>
+      
+     
     );
+    
   }
 }
 
-{
-  /* <div class="footer">
-  <p>Footer</p>
-</div> */
-}
+
+   
+
