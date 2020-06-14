@@ -39,12 +39,13 @@ export default class Navbar extends Component {
               </Link>
               
             </li>
-            {/* Not linked to anything yet , put them there to remember they needed added */}
-            <button onclick="document.getElementById('id01').style.display='block'">Sign Up</button>
-            <button onclick="document.getElementById('id01').style.display='block'">Sign In</button>
-            <button onclick="document.getElementById('id01').style.display='block'">Log Out</button>
-           
+            
+    
           </ul>
+          <div className="Logins">
+            <Link to="/Login"><button type="submit">Login&nbsp;|&nbsp;Register</button></Link>
+            <button onclick="document.getElementById('id01').style.display='block'">Log Out</button>
+          </div>
         </div>
       </nav>
     );

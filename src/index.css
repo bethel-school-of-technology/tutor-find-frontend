@@ -49,16 +49,16 @@ ul {
     margin-left: calc(50% - 50vw);
     width: 100vw;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0.8;
+    
 }
 
 .navbar-nav {
     width: 80em;
     height: 3em;
-    margin-left: 10em;
-    align-items: center;
+    /*padding-bottom: 15%;
+    padding-left: 90mm;
+    margin: 15%;*/
+    margin-left: 30%;
 }
 
 .navbar-item {
@@ -75,6 +75,11 @@ ul {
 .navimg {
     height: 4em;
     width: 4em;
+    justify-content: left;
+}
+
+.Logins {
+    justify-content: right;
 }
 
 li {
@@ -107,7 +112,6 @@ p{
     background-color: transparent;
     opacity: 0.6;
     text-align: right;
-    padding-top: 15px;
     padding-bottom: 15%;
     padding-left: 90mm;
     margin: 15%;
