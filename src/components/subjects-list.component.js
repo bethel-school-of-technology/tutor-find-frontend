@@ -65,12 +65,12 @@ export default class SubjectsList extends Component {
 
   render() {
     return (
-      <div>
-        <h3>Subjects List</h3>
+      <div className="page">
+        <h3 style= {{ textAlign: "center"}}>Search for Tutor Services</h3>
         
         <table className="table">
          
-        <thead className="thead-light">
+        <tr className="thead-light">
             <tr>
               <th> Username </th>
               <th><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for users..." title="Type in a user"></input></th>
@@ -83,14 +83,11 @@ export default class SubjectsList extends Component {
 
               {/* <th>Date</th>
               <th>Actions</th> */}
-
-
-                <th><button id="myBtn" onclick="javascript:alert('Hello World!')">submit</button></th>
+              </tr>
             </tr>
-
-          </thead>
           <tbody>{this.subjectList()}</tbody>
         </table>
+        <div className="subject-btn"><button id="myBtn" onclick="javascript:alert('Hello World!')">Submit</button></div>
       </div>
     );
   }
