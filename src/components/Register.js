@@ -42,7 +42,7 @@ return (
               </p>
             </div>
             <form noValidate onSubmit={this.onSubmit}>
-              <div className="input-field col s12" style={{ paddingRight: ".9em" }}>
+              <div className="input-field col s12" style={{ paddingRight: "4.25em" }}>
                 <label htmlFor="name">Name:&nbsp;&nbsp;</label>
                 <input
                   onChange={this.onChange}
@@ -53,7 +53,7 @@ return (
                 />
                 
               </div>
-              <div className="input-field col s12" >
+              <div className="input-field col s12" style={{ paddingRight: "4em" }}>
                 <label htmlFor="email">Email:&nbsp;&nbsp;</label>
                 <input
                   onChange={this.onChange}
@@ -64,7 +64,7 @@ return (
                 />
                 
               </div>
-              <div className="input-field col s12" style={{ paddingRight: "2.6em" }}>
+              <div className="input-field col s12" style={{ paddingRight: "5.9em" }}>
                 <label htmlFor="password">Password:&nbsp;&nbsp;</label>
                 <input
                   onChange={this.onChange}
@@ -75,7 +75,7 @@ return (
                 />
                 
               </div>
-              <div className="input-field col s12" style={{ paddingRight: "6.25em" }}>
+              <div className="input-field col s12" style={{ paddingRight: "9.7em" }}>
                 <label htmlFor="password2">Confirm Password:&nbsp;&nbsp;</label>
                 <input
                   onChange={this.onChange}
@@ -86,7 +86,7 @@ return (
                 />
                 
               </div>
-              <div className="col s12" style={{ paddingLeft: "3em" }}>
+              <div className="col s12" style={{ paddingRight: "1.3em" }}>
                 <button
                   style={{
                     width: "150px",

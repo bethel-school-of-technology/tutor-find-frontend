@@ -44,7 +44,6 @@ export default class Navbar extends Component {
           </ul>
           <div className="Logins">
             <Link to="/Login"><button type="submit">Login&nbsp;|&nbsp;Register</button></Link>
-            <button onclick="document.getElementById('id01').style.display='block'">Log Out</button>
           </div>
         </div>
       </nav>
