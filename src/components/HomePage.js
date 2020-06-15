@@ -6,7 +6,7 @@ export default class HomePage extends Component {
     return (
       <div className="homepage">
         {this.props.children}
-        <ul className="kyle">Welcome to the Community </ul>
+        <ul className="kyle">::::::Welcome to the Community:::::: </ul>
         <p></p>
         <h2 className="joe">
           create&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;connect&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;converse
