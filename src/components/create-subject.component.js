@@ -18,8 +18,7 @@ export default class CreateSubjects extends Component {
       subject: "",
       description: "",
       duration: 0,
-    }
- 
+    };
   }
 
   onChangeUsername(e) {
@@ -46,7 +45,6 @@ export default class CreateSubjects extends Component {
     });
   }
 
-
   onSubmit(e) {
     e.preventDefault();
 
@@ -54,7 +52,7 @@ export default class CreateSubjects extends Component {
       username: this.state.username,
       subject: this.state.subject,
       description: this.state.description,
-      duration: this.state.duration
+      duration: this.state.duration,
     };
 
     console.log(subject);
@@ -63,16 +61,19 @@ export default class CreateSubjects extends Component {
       .post("http://localhost:7000/subjects/add", subject)
       .then((res) => console.log(res.data));
 
-      window.location = "/sessions";
+    window.location = "/sessions";
   }
 
   render() {
     return (
       <div className="page">
-      <div className="create-header">
-        <h3>Post Your Tutor Service</h3>
-        <div>Create a post with your service information to display to potential students.</div>
-        <br></br>
+        <div className="create-header">
+          <h3>Post Your Tutor Service</h3>
+          <div>
+            Create a post with your service information to display to potential
+            students.
+          </div>
+          <br></br>
         </div>
         <form onSubmit={this.onSubmit}>
           <div className="form-group'">
@@ -88,13 +89,20 @@ export default class CreateSubjects extends Component {
 
           <div className="form-group">
             <label>Subject: </label>
-            <input
+            <select class="custom-select" id="inputGroupSelect02">
+              <option selected>Choose...</option>
+              <option value="Math">Math</option>
+              <option value="Science">Science</option>
+              <option value="History">History</option>
+              <option value="English">English</option>
+            </select>
+            {/* <input
               type="text"
               required
               className="form-control"
               value={this.state.subject}
               onChange={this.onChangeSubject}
-            />
+            /> */}
           </div>
           <div className="form-group">
             <label>Description: </label>
@@ -128,4 +136,3 @@ export default class CreateSubjects extends Component {
     );
   }
 }
-
