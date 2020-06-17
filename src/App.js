@@ -37,7 +37,7 @@ function App(props) {
         <Route path="/signup" exact component={Signup} />
         <Route path="/login" exact component={Login} />
         <Route path="/contact" exact component={Contact} />
-        <Route path="/admin" component={Admin} />
+        <PrivateRoute path="/admin" component={Admin} />
       </div>
     </Router>
     </AuthContext.Provider>
