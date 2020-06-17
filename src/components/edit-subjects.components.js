@@ -24,12 +24,12 @@ export default class EditSubject extends Component {
   componentDidMount() {
     axios
       .get("http://localhost:7000/subjects/" + this.props.match.params.id)
-      .then(response => {
+      .then((response) => {
         this.setState({
           username: response.data.username,
           subject: response.data.subject,
           description: response.data.description,
-          duration: response.data.duration
+          duration: response.data.duration,
         });
       })
       .catch(function (error) {
@@ -74,7 +74,6 @@ export default class EditSubject extends Component {
     });
   }
 
-
   onSubmit(e) {
     e.preventDefault();
 
@@ -114,13 +113,17 @@ export default class EditSubject extends Component {
           </div>
           <div className="form-group">
             <label>Subject: </label>
-            <input
-              type="text"
-              required
+            <select
               className="form-control"
               value={this.state.subject}
               onChange={this.onChangeSubject}
-            />
+            >
+              <option selected>Choose...</option>
+              <option value="Math">Math</option>
+              <option value="Science">Science</option>
+              <option value="History">History</option>
+              <option value="English">English</option>
+            </select>
           </div>
           <div className="form-group">
             <label>Description: </label>
@@ -144,11 +147,7 @@ export default class EditSubject extends Component {
           </div>
 
           <div className="form-group">
-            <input
-              type="submit"
-              value="Submit"
-              className="btn btn-primary"
-            />
+            <input type="submit" value="Submit" className="btn btn-primary" />
           </div>
         </form>
       </div>
