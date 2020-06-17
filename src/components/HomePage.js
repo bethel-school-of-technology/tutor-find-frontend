@@ -40,7 +40,12 @@ export default class HomePage extends Component {
           </Link>
         </h4>
         <div className="footer">
-          <h3>This is my footer</h3>
+          <div>
+          <h5>Contact Info:
+            Email: Tutorfind@Awesome.com
+            Phone: 777-777-7777
+            </h5>
+          </div>
         </div>
         
       </div>
