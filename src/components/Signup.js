@@ -4,7 +4,7 @@ import { Link, Redirect } from "react-router-dom";
 import axios from 'axios';
 import { Card, Logo, Form, Input, Button, Error } from "../components/AuthForm";
 import { useAuth } from "../context/auth";
-
+/*
 export default class Signup extends Component {
   constructor(props) {
     super(props);
@@ -40,6 +40,10 @@ export default class Signup extends Component {
       password: this.state.password,
     };
 
+    const [isLoggedIn, setLoggedIn] = useState(false);
+    const [setIsError] = useState(false);
+    const { setAuthTokens } = useAuth();
+
     console.log(user);
 
     axios
@@ -51,11 +55,15 @@ export default class Signup extends Component {
         } else {
           setIsError(true);
         }
-      })
-      .catch(e => {
+      }).catch(e => {
         setIsError(true);
       });
-      
+
+      if (isLoggedIn) {
+        return <Redirect to="/" />;
+      }
+    }
+
 
   render() {
     return (
@@ -116,12 +124,38 @@ export default class Signup extends Component {
           </div>
         </form>
       </div>
+      
+
+
+      <Card>
+      <Logo src={"https://i.ibb.co/YZDRqDw/tutorfindlogo.jpg"} />
+      <Form>
+        <Input
+          type="username"
+          value={userName}
+          onChange={e => {
+            setUserName(e.target.value);
+          }}
+          placeholder="email"
+        />
+        <Input
+          type="password"
+          value={password}
+          onChange={e => {
+            setPassword(e.target.value);
+          }}
+          placeholder="password"
+        />
+        <Button onClick={postSignup}>Sign Up</Button>
+      </Form>
+      <Link to="/login">Already have an account?</Link>
+    </Card>
     );
   }
 }
 
-
-  /*function Signup() {
+*/
+  function Signup() {
   const [isLoggedIn, setLoggedIn] = useState(false);
   const [setIsError] = useState(false);
   const [userName, setUserName] = useState("");
@@ -177,4 +211,3 @@ export default class Signup extends Component {
 }
 
 export default Signup;
-*/
