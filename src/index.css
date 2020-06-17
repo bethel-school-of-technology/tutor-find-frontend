@@ -170,7 +170,7 @@ ul {
 .create-header {
     text-align: center;
 }
-h4{
+.Signup-btn{
   text-align: right;
   background-color: transparent;
   
@@ -182,3 +182,13 @@ button{
 .subject-btn {
     text-align: center;
 }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: grey;
+    color: white;
+    text-align: center;
+  }

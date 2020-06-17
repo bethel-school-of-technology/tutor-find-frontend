@@ -7,6 +7,7 @@ export default class EditSubject extends Component {
   constructor(props) {
     super(props);
 
+    this.onChangeUsername = this.onChangeUsername.bind(this);
     this.onChangeSubject = this.onChangeSubject.bind(this);
     this.onChangeDescription = this.onChangeDescription.bind(this);
     this.onChangeDuration = this.onChangeDuration.bind(this);
@@ -37,17 +38,23 @@ export default class EditSubject extends Component {
       });
 
     axios
-      .get("http://localhost:7000/users/")
+      .get("http://localhost:7000/subjects/")
       .then(response => {
         if (response.data.length > 0) {
           this.setState({
-            users: response.data.map(user => user.username),
+            users: response.data.map(user => user.subject),
           });
         }
       })
       .catch(error => {
         console.log(error);
       });
+  }
+
+  onChangeUsername(e) {
+    this.setState({
+      username: e.target.value,
+    });
   }
 
   onChangeSubject(e) {
@@ -97,22 +104,15 @@ export default class EditSubject extends Component {
         <h3>Edit Subject List</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group">
-            <label>Subject: </label>
-            <select
-              ref="userInput"
+            <label>Username: </label>
+            <input
+              type="text"
               required
               className="form-control"
-              value={this.state.subject}
-              onChange={this.onChangeSubject}
+              value={this.state.username}
+              onChange={this.onChangeUsername}
             >
-              {this.state.users.map(function (user) {
-                return (
-                  <option key={user} value={user}>
-                    {user}
-                  </option>
-                );
-              })}
-            </select>
+            </input>
           </div>
           <div className="form-group">
             <label>Subject: </label>

@@ -36,9 +36,12 @@ export default class HomePage extends Component {
         <p></p>
         <h4> 
           <Link to="/Register">
-            <button type="submit">Sign Up</button>
+            <button className="Signup-btn" type="submit">Sign Up</button>
           </Link>
         </h4>
+        <div className="footer">
+          <h3>This is my footer</h3>
+        </div>
         
       </div>
       

@@ -11,6 +11,7 @@ import HomePage from "./components/HomePage";
 import SessionsList from "./components/sessions-list.component";
 import Register from "./components/Register";
 import Login from "./components/Login";
+import Contact from "./components/Contact"
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/sessions" exact component={SessionsList} />
         <Route path="/register" exact component={Register} />
         <Route path="/login" exact component={Login} />
+        <Route path="/contact" exact component={Contact} />
       </div>
     </Router>
   );

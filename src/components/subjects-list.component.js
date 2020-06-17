@@ -68,17 +68,15 @@ export default class SubjectsList extends Component {
       <div className="page">
         <h3 style= {{ textAlign: "center"}}>Search for Tutor Services</h3>
         
-        <table className="table">
+        <table className="table" style={{ justifyContent: "center" }}>
          
         <tr className="thead-light">
             <tr>
-              <th> Username </th>
-              <th><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for users..." title="Type in a user"></input></th>
 
-              <th> Description </th>
+              <th> Subject </th>
               <th><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for subject..." title="Type in a subject"></input></th>
              
-              <th>Time</th>
+              <th>Duration</th>
               <th><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for duration.." title="Type in duration"></input></th>
 
               {/* <th>Date</th>
