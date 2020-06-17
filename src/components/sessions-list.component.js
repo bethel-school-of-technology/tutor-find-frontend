@@ -11,7 +11,7 @@ const Subject = props => (
     <td>
       <Link to={"/edit/" + props.subject._id}>Edit</Link>&nbsp;|&nbsp;
       <a href="#"
-      onClick={() => { props.deleteSubject(props.subject._id) 
+      onClick={() => { props.deleteSubjects(props.subject._id) 
       }}>
         Delete
       </a>
@@ -23,7 +23,7 @@ export default class SubjectsList extends Component {
   constructor(props) {
     super(props);
 
-    this.deleteSubject = this.deleteSubject.bind(this);
+    this.deleteSubjects = this.deleteSubjects.bind(this);
 
     this.state = { subjects: [] };
 
@@ -42,7 +42,7 @@ export default class SubjectsList extends Component {
       })
   }
 
-  deleteSubject(id) {
+  deleteSubjects(id) {
     axios
       .delete("http://localhost:7000/subjects/" + id)
       .then(res => console.log(res.data));
@@ -57,7 +57,7 @@ export default class SubjectsList extends Component {
       return (
         <Subject
           subject={currentSubject}
-          deleteSessions={this.deleteSubjects}
+          deleteSubjects={this.deleteSubjects}
           key={currentSubject._id}
         />
       );

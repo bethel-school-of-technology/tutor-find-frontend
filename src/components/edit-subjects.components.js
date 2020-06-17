@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 export default class EditSubject extends Component {
@@ -111,8 +110,7 @@ export default class EditSubject extends Component {
               className="form-control"
               value={this.state.username}
               onChange={this.onChangeUsername}
-            >
-            </input>
+            />
           </div>
           <div className="form-group">
             <label>Subject: </label>
@@ -148,7 +146,7 @@ export default class EditSubject extends Component {
           <div className="form-group">
             <input
               type="submit"
-              value="Edit Subject List"
+              value="Submit"
               className="btn btn-primary"
             />
           </div>
