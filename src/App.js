@@ -6,30 +6,41 @@ import Navbar from "./components/navbar.component";
 import SubjectList from "./components/subjects-list.component";
 import EditSubject from "./components/edit-subjects.components";
 import CreateSubject from "./components/create-subject.component";
-import CreateUser from "./components/create-user.component";
 import HomePage from "./components/HomePage";
 import SessionsList from "./components/sessions-list.component";
-import Register from "./components/Register";
+import Signup from "./components/Signup";
 import Login from "./components/Login";
 import Contact from "./components/Contact"
+import Admin from "./components/Admin";
+import PrivateRoute from "./components/PrivateRoute";
+import { AuthContext } from "./context/auth";
 
-function App() {
+function App(props) {
+  const existingTokens = JSON.parse(localStorage.getItem("tokens"));
+  const [authTokens, setAuthTokens] = React.useState(existingTokens);
+  
+  const setTokens = (data) => {
+    localStorage.setItem("tokens", JSON.stringify(data));
+    setAuthTokens(data);
+  }
   return (
+    <AuthContext.Provider value={{ authTokens, setAuthTokens: setTokens }}>
     <Router>
       <div className="container">
         <Navbar />
         <br />
         <Route path="/" exact component={HomePage} />
-        <Route path="/subjects-list" component={SubjectList} />
-        <Route path="/edit/:id" component={EditSubject} />
-        <Route path="/create" component={CreateSubject} />
-        <Route path="/user" exct component={CreateUser} />
-        <Route path="/sessions" exact component={SessionsList} />
-        <Route path="/register" exact component={Register} />
+        <PrivateRoute path="/subjects-list" component={SubjectList} />
+        <PrivateRoute path="/edit/:id" component={EditSubject} />
+        <PrivateRoute path="/create" component={CreateSubject} />
+        <PrivateRoute path="/sessions" exact component={SessionsList} />
+        <Route path="/signup" exact component={Signup} />
         <Route path="/login" exact component={Login} />
         <Route path="/contact" exact component={Contact} />
+        <PrivateRoute path="/admin" component={Admin} />
       </div>
     </Router>
+    </AuthContext.Provider>
   );
 }
 

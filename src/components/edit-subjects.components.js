@@ -17,7 +17,7 @@ export default class EditSubject extends Component {
       subject: "",
       description: "",
       duration: 0,
-      users: []
+      //users: []
     };
   }
 
@@ -36,7 +36,7 @@ export default class EditSubject extends Component {
         console.log(error);
       });
 
-    axios
+    /*axios
       .get("http://localhost:7000/subjects/")
       .then(response => {
         if (response.data.length > 0) {
@@ -47,7 +47,7 @@ export default class EditSubject extends Component {
       })
       .catch(error => {
         console.log(error);
-      });
+      });*/
   }
 
   onChangeUsername(e) {

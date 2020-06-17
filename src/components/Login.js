@@ -1,85 +1,63 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-class Login extends Component {
-  constructor() {
-    super();
-    this.state = {
-      email: "",
-      password: "",
-      errors: {}
-    };
-  }
-onChange = e => {
-    this.setState({ [e.target.id]: e.target.value });
-  };
-onSubmit = e => {
-    e.preventDefault();
-const userData = {
-      email: this.state.email,
-      password: this.state.password
-    };
-console.log(userData);
-  };
+import React, { useState } from "react";
+import { Link, Redirect } from "react-router-dom";
+import axios from 'axios';
+import { Card, Logo, Form, Input, Button, Error } from "../components/AuthForm";
+import { useAuth } from "../context/auth";
 
-  
-render() {
-    const { errors } = this.state;
-return (
-      <div className="container page create-header">
-        <div className="row">
-          <div className="col s8 offset-s2">
-            <Link to="/">
-              Back to home
-            </Link>
-            <div className="col s12" style={{ paddingLeft: "11.250px" }}>
-              <h4>
-                <b>Login Below</b>
-              </h4>
-              <p>
-                Don't have an account? <Link to="/register">Register</Link>
-              </p>
-            </div>
-            <form noValidate onSubmit={this.onSubmit}>
-              <div className="input-field col s12" style={{ paddingRight: "4.1em" }}>
-                <label htmlFor="email">Email:&nbsp;&nbsp;</label>
-                <input
-                  onChange={this.onChange}
-                  value={this.state.email}
-                  error={errors.email}
-                  id="email"
-                  type="email"
-                />
-                
-              </div>
-              <div className="input-field col s12" style={{ paddingRight: "6em" }}>
-                <label htmlFor="password">Password:&nbsp;&nbsp;</label>
-                <input
-                  onChange={this.onChange}
-                  value={this.state.password}
-                  error={errors.password}
-                  id="password"
-                  type="password"
-                />
-                
-              </div>
-              <div className="col s12" style={{ paddingRight: "1.5em" }}>
-                <button
-                  style={{
-                    width: "150px",
-                    borderRadius: "3px",
-                    letterSpacing: "1.5px",
-                    marginTop: "1rem"
-                  }}
-                  type="submit"
-                >
-                  Login
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    );
+function Login(props) {
+  const [isLoggedIn, setLoggedIn] = useState(false);
+  const [isError, setIsError] = useState(false);
+  const [userName, setUserName] = useState("");
+  const [password, setPassword] = useState("");
+  const { setAuthTokens } = useAuth();
+
+
+  function postLogin() {
+    axios.post("http://localhost:7000/users/", {
+      userName,
+      password
+    }).then(result => {
+      if (result.status === 200) {
+        setAuthTokens(result.data);
+        setLoggedIn(true);
+      } else {
+        setIsError(true);
+      }
+    }).catch(e => {
+      setIsError(true);
+    });
   }
+
+  if (isLoggedIn) {
+    return <Redirect to="/" />;
+  }
+
+  return (
+    <Card>
+      <Logo src={"https://i.ibb.co/YZDRqDw/tutorfindlogo.jpg"} />
+      <Form>
+        <Input
+          type="username"
+          value={userName}
+          onChange={e => {
+            setUserName(e.target.value);
+          }}
+          placeholder="email"
+        />
+        <Input
+          type="password"
+          value={password}
+          onChange={e => {
+            setPassword(e.target.value);
+          }}
+          placeholder="password"
+        />
+        <Button onClick={postLogin}>Sign In</Button>
+      </Form>
+      <Link to="/signup">Don't have an account?</Link>
+        { isError &&<Error>The username or password provided were incorrect!</Error> }
+    </Card>
+  );
 }
+
 export default Login;
