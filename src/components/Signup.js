@@ -1,7 +1,6 @@
-
 import React, { useState, Component } from "react";
 import { Link, Redirect } from "react-router-dom";
-import axios from 'axios';
+import axios from "axios";
 import { Card, Logo, Form, Input, Button, Error } from "../components/AuthForm";
 import { useAuth } from "../context/auth";
 /*
@@ -155,7 +154,7 @@ export default class Signup extends Component {
 }
 
 */
-  function Signup() {
+function Signup() {
   const [isLoggedIn, setLoggedIn] = useState(false);
   const [setIsError] = useState(false);
   const [userName, setUserName] = useState("");
@@ -163,20 +162,22 @@ export default class Signup extends Component {
   const { setAuthTokens } = useAuth();
 
   function postSignup() {
-
-    axios.post("http://localhost:7000/users/add/", {
-      userName,
-      password
-    }).then(result => {
-      if (result.status === 200) {
-        setAuthTokens(result.data);
-        setLoggedIn(true);
-      } else {
+    axios
+      .post("http://localhost:7000/users/add/", {
+        userName,
+        password,
+      })
+      .then((result) => {
+        if (result.status === 200) {
+          setAuthTokens(result.data);
+          setLoggedIn(true);
+        } else {
+          setIsError(true);
+        }
+      })
+      .catch((e) => {
         setIsError(true);
-      }
-    }).catch(e => {
-      setIsError(true);
-    });
+      });
   }
 
   if (isLoggedIn) {
@@ -190,7 +191,7 @@ export default class Signup extends Component {
         <Input
           type="username"
           value={userName}
-          onChange={e => {
+          onChange={(e) => {
             setUserName(e.target.value);
           }}
           placeholder="email"
@@ -198,7 +199,7 @@ export default class Signup extends Component {
         <Input
           type="password"
           value={password}
-          onChange={e => {
+          onChange={(e) => {
             setPassword(e.target.value);
           }}
           placeholder="password"
