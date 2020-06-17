@@ -17,10 +17,10 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-h3 {
+/* h3 {
     font-size: small;
     font-style: italic;
-}
+} */
 
 myInput {
     background-image: url("/css/searchicon.png");
@@ -172,11 +172,12 @@ ul {
 }
 .Signup-btn{
   text-align: right;
-  background-color: transparent;
+  background-color: white;
+  font-size: medium;
   
 }
 button{
-    background-color: rgb(252, 249, 246);
+    background-color: rgb(244, 247, 248);
 }
 
 .subject-btn {
@@ -188,7 +189,19 @@ button{
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: grey;
-    color: white;
+    background-color: rgb(80, 75, 83);
+    color: whitesmoke;
     text-align: center;
+
   }
+div{
+    font-size: medium;
+}
+.page{
+    background-color: rgb(237, 241, 243);
+    opacity: .9;
+}
+
+
+
+  

@@ -68,12 +68,12 @@ export default class SubjectsList extends Component {
       <div className="page">
         <h3 style= {{ textAlign: "center"}}>Search for Tutor Services</h3>
         
-        <table className="table" style={{ justifyContent: "center" }}>
+        <table className="table" style={{ justifyContent: "right" }}>
          
         <tr className="thead-light">
             <tr>
 
-              <th> Subject </th>
+              <th> Subject </th> 
               <th><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for subject..." title="Type in a subject"></input></th>
              
               <th>Duration</th>
