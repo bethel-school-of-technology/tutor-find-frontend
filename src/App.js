@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Chatkit from "@pusher/chatkit";
+// import Chatkit from "@pusher/chatkit";
 import Navbar from "./components/navbar.component";
 import SubjectList from "./components/subjects-list.component";
 import EditSubject from "./components/edit-subjects.components";
