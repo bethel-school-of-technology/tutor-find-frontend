@@ -71,17 +71,42 @@ export default class SubjectsList extends Component {
         <table className="table" style={{ justifyContent: "right" }}>
          
         <tr className="thead-light">
-            <tr>
-
-              <th> Subject </th> 
-              <th><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for subject..." title="Type in a subject"></input></th>
-             
-              <th>Duration</th>
-              <th><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for duration.." title="Type in duration"></input></th>
-
-              {/* <th>Date</th>
-              <th>Actions</th> */}
-              </tr>
+          
+            <th>
+            <div className="form-group">
+            <label>Subject: </label>
+            <select
+              className="form-control"
+              value={this.state.subject}
+              onChange={this.onChangeSubject}
+            >
+              <option selected>Choose...</option>
+              <option value="Math">Math</option>
+              <option value="Science">Science</option>
+              <option value="History">History</option>
+              <option value="English">English</option>
+              <option value="Music"> Music</option>
+            </select>
+            </div>
+            <div className="form-group">
+            <label>Duration: </label>
+            <select
+              className="form-control"
+              value={this.state.subject}
+              onChange={this.onChangeSubject}
+            >
+              <option selected>Choose...</option>
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="30">30</option>
+              <option value="45">45</option>
+              <option value="60">60</option>
+            </select>
+            </div>
+          
+          
+            
+              </th>
             </tr>
           <tbody>{this.subjectList()}</tbody>
         </table>

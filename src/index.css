@@ -181,9 +181,9 @@ button {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgb(80, 75, 83);
+    background-color: rgb(148, 144, 150);
     color: whitesmoke;
-    text-align: center;
+    text-align: right;
 }
 
 div {
@@ -191,8 +191,19 @@ div {
 }
 
 .page {
-    background-color: rgb(237, 241, 243);
+    background-color: rgb(193, 200, 204);
     opacity: 0.97;
+}
+.page2{
+    background-color: rgb(250, 194, 166);
+    text-align: left;
+    padding: 1em;
+    opacity: .6;
+    padding-left: 40em;
+}
+th{
+    background-color: rgb(142, 143, 143);
+
 }
 
 
