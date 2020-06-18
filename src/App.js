@@ -31,21 +31,23 @@ function App(props) {
   };
   return (
     <AuthContext.Provider value={{ authTokens, setAuthTokens: setTokens }}>
-      <Router>
-        <div className="container">
-          <Navbar />
-          <br />
-          <Route path="/" exact component={HomePage} />
-          <Route path="/subjects-list" component={SubjectList} />
-          <Route path="/edit/:id" component={EditSubject} />
-          <Route path="/create" component={CreateSubject} />
-          <Route path="/sessions" exact component={SessionsList} />
-          <Route path="/signup" exact component={Signup} />
-          <Route path="/login" exact component={Login} />
-          <Route path="/contact" exact component={Contact} />
-          <Route path="/admin" component={Admin} />
-        </div>
-      </Router>
+
+    <Router>
+      <div className="container">
+        <Navbar />
+        <br />
+        <Route path="/" exact component={HomePage} />
+        <Route path="/subjects-list" component={SubjectList} />
+        <Route path="/edit/:id" component={EditSubject} />
+        <Route path="/create" component={CreateSubject} />
+        <Route path="/sessions" exact component={SessionsList} />
+        <Route path="/signup" exact component={Signup} />
+        <Route path="/login" exact component={Login} />
+        <Route path="/contact" exact component={Contact} />
+        <PrivateRoute path="/admin" component={Admin} />
+      </div>
+    </Router>
+
     </AuthContext.Provider>
   );
 }

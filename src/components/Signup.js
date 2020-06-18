@@ -1,12 +1,9 @@
 import React, { useState, Component } from "react";
+
 import { Link, Redirect } from "react-router-dom";
 import axios from "axios";
 import { Card, Logo, Form, Input, Button, Error } from "../components/AuthForm";
 import { useAuth } from "../context/auth";
-/*
-export default class Signup extends Component {
-  constructor(props) {
-    super(props);
 
     this.setUserName = this.setUserName.bind(this);
     this.setPassword = this.setPassword.bind(this);
@@ -154,12 +151,14 @@ export default class Signup extends Component {
 }
 
 */
-function Signup() {
+function Login() {
+
   const [isLoggedIn, setLoggedIn] = useState(false);
-  const [setIsError] = useState(false);
+  const [isError, setIsError] = useState(false);
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const { setAuthTokens } = useAuth();
+
 
   function postSignup() {
     axios
@@ -176,6 +175,7 @@ function Signup() {
         }
       })
       .catch((e) => {
+
         setIsError(true);
       });
   }
@@ -204,11 +204,12 @@ function Signup() {
           }}
           placeholder="password"
         />
-        <Button onClick={postSignup}>Sign Up</Button>
+        <Button onClick={postLogin}>Sign Up</Button>
       </Form>
       <Link to="/login">Already have an account?</Link>
+        { isError &&<Error>The username or password provided were incorrect!</Error> }
     </Card>
   );
 }
 
-export default Signup;
+export default Login;
