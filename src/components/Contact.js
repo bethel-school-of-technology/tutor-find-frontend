@@ -6,7 +6,7 @@ export default class HomePage extends Component {
     return (
       
       <div className="page2">
-        <th>Contact Info:</th>
+        <tr>Contact Us:</tr>
         <tr>Email: Tutorfind@Awesome.com</tr>
         <tr>Phone: 777-777-7777</tr>
        

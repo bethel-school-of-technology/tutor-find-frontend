@@ -195,15 +195,20 @@ div {
     opacity: 0.97;
 }
 .page2{
-    background-color: rgb(250, 194, 166);
+    background-color: rgb(248, 202, 149);
     text-align: left;
+    margin: 2em;
     padding: 1em;
     opacity: .6;
     padding-left: 40em;
+    font-weight: 700;
 }
 th{
     background-color: rgb(142, 143, 143);
-
+}
+tr{
+    color: rgb(31, 32, 32);
+    text-shadow: 3px 2px rgb(149, 153, 155);
 }
 
 
@@ -391,4 +396,13 @@ body {
 .help-text {
     position: absolute;
     top: 10px;
+}
+h5{
+    background-color: rgb(248, 200, 68);
+    padding: em;
+    margin: em;
+}
+h6{
+    margin: 70em;
+    text-shadow: 3px 3px black;
 }

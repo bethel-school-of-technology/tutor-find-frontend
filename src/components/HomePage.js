@@ -40,13 +40,15 @@ export default class HomePage extends Component {
           </Link>
         </h4>
         <div className="footer">
-          <th> Thank you for using Tutorfind</th>
-          
+        <h5>
+          <tr> _______Thank you for using Tutorfind______</tr>
+          </h5>
+          <h6>
           <th><Link to="/contact" className="nav-link">
                 Contact
               </Link>
               </th>
-         
+      </h6>
         
           
           
