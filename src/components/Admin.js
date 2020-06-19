@@ -1,13 +1,19 @@
-
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "../components/AuthForm";
 import { useAuth } from "../context/auth";
+import { Redirect } from "react-router-dom";
 
 function Admin(props) {
+  const [isLoggedOut, setLoggedOut] = useState(false);
   const { setAuthTokens } = useAuth();
 
   function logOut() {
-    setAuthTokens();
+    setAuthTokens(null);
+    setLoggedOut(true);
+  }
+
+  if (isLoggedOut) {
+    return <Redirect to="/home" />;
   }
 
   return (
