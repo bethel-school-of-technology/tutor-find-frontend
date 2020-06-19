@@ -51,8 +51,8 @@ export default class Navbar extends Component {
     
           </ul>
           <div className="Logins">
-            <Link to="/login"><button type="submit">Login</button></Link>
-            <Link to="/signup"><button type="submit">Signup</button></Link>
+            <th><Link to="/login"><button type="submit">Login</button></Link></th>
+            <th><Link to="/signup"><button type="submit">Signup</button></Link></th>
           </div>
         </div>
       </nav>
