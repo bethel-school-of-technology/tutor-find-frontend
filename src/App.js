@@ -11,7 +11,6 @@ import SessionsList from "./components/sessions-list.component";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
 import Contact from "./components/Contact";
-import Admin from "./components/Admin";
 import PrivateRoute from "./components/PrivateRoute";
 import { AuthContext } from "./context/auth";
 import MessageList from "./chat/MessageList";
@@ -44,7 +43,6 @@ function App(props) {
         <Route path="/signup" exact component={Signup} />
         <Route path="/login" exact component={Login} />
         <Route path="/contact" exact component={Contact} />
-        <PrivateRoute path="/admin" component={Admin} />
       </div>
     </Router>
 

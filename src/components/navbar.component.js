@@ -12,7 +12,6 @@ function Navbar(props) {
     return <Redirect to="/home" />;
   }
 
-  
 
     return (
       <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
@@ -52,11 +51,6 @@ function Navbar(props) {
                 Contact
               </Link>
             </li>
-            <li className="navbar-item">
-            <Link to="/admin" className="nav-link">
-              Admin
-            </Link>
-          </li>
     
           </ul>
           <div className="Logins">
