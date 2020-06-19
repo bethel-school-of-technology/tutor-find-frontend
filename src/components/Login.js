@@ -13,15 +13,17 @@ function Login(props) {
 
 
   function postLogin() {
-    axios.post("http://localhost:7000/users/", {
+    axios.post("http://localhost:7000/users/login", {
       userName,
       password
     }).then(result => {
-      if (result.status === 200) {
+      if (result.data.length > 0) {
         setAuthTokens(result.data);
         setLoggedIn(true);
       } else {
         setIsError(true);
+      //console.log(result.data.length);
+        
       }
     }).catch(e => {
       setIsError(true);
