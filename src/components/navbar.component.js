@@ -9,6 +9,7 @@ function Navbar(props) {
 
   function logOut() {
     setAuthTokens(null);
+    localStorage.clear();
     return <Redirect to="/home" />;
   }
 
@@ -51,6 +52,7 @@ function Navbar(props) {
                 Contact
               </Link>
             </li>
+
     
           </ul>
           <div className="Logins">

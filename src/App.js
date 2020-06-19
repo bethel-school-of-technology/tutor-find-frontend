@@ -28,6 +28,7 @@ function App(props) {
     localStorage.setItem("tokens", JSON.stringify(data));
     setAuthTokens(data);
   };
+
   return (
     <AuthContext.Provider value={{ authTokens, setAuthTokens: setTokens }}>
 
