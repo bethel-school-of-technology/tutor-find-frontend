@@ -69,13 +69,16 @@ export default class SubjectsList extends Component {
         <h3 style= {{ textAlign: "center"}}>Search for Tutor Services</h3>
         
         <table className="table" style={{ justifyContent: "right" }}>
+      
          
         <tr className="thead-light">
+
           
             <th>
             <div className="form-group">
             <label>Subject: </label>
             <select
+
               className="form-control"
               value={this.state.subject}
               onChange={this.onChangeSubject}
@@ -85,6 +88,7 @@ export default class SubjectsList extends Component {
               <option value="Science">Science</option>
               <option value="History">History</option>
               <option value="English">English</option>
+
               <option value="Music"> Music</option>
             </select>
             </div>
@@ -96,6 +100,7 @@ export default class SubjectsList extends Component {
               onChange={this.onChangeSubject}
             >
               <option selected>Choose...</option>
+             
               <option value="10">10</option>
               <option value="20">20</option>
               <option value="30">30</option>
@@ -104,9 +109,9 @@ export default class SubjectsList extends Component {
             </select>
             </div>
           
-          
-            
+    
               </th>
+
             </tr>
           <tbody>{this.subjectList()}</tbody>
         </table>
