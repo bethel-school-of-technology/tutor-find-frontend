@@ -1,10 +1,19 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { Link } from "react-router-dom";
+import { useAuth } from "../context/auth";
+import { Redirect } from "react-router-dom";
 import ReactSearchBox from 'react-search-box'
 
+function Navbar(props) {
+  const { setAuthTokens } = useAuth();
 
-export default class Navbar extends Component {
-  render() {
+  function logOut() {
+    setAuthTokens(null);
+    return <Redirect to="/home" />;
+  }
+
+  
+
     return (
       <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
       
@@ -53,12 +62,10 @@ export default class Navbar extends Component {
           <div className="Logins">
             <th><Link to="/login"><button type="submit">Login</button></Link></th>
             <th><Link to="/signup"><button type="submit">Signup</button></Link></th>
+            <th><button onClick={logOut}>Logout</button></th>
           </div>
         </div>
       </nav>
     );
     }
-  
-   
-  }
-
+    export default Navbar;
