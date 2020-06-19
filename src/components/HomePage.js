@@ -35,7 +35,7 @@ export default class HomePage extends Component {
         </h3>
         <p></p>
         <h4> 
-          <Link to="/Register">
+          <Link to="/signup">
             <button className="Signup-btn" type="submit">Sign Up</button>
           </Link>
         </h4>
