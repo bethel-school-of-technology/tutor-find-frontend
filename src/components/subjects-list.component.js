@@ -2,21 +2,19 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-const Subject = (props) => (
+const Subject = props => (
   <tr>
     <td>{props.subject.username}</td>
+    <td>{props.subject.subject}</td>
     <td>{props.subject.description}</td>
     <td>{props.subject.duration}</td>
-    <td>{props.subject.date.substring(0, 10)}</td>
     <td>
-      <Link to={"/edit/" + props.subject._id}>edit</Link> |{" "}
-      <button
-        onClick={() => {
-          props.deleteSubject(props.subject._id);
-        }}
-      >
-        delete
-      </button>
+      <Link to={"/edit/" + props.subject._id}>Edit</Link>&nbsp;|&nbsp;
+      <a href="#"
+      onClick={() => { props.deleteSubjects(props.subject._id) 
+      }}>
+        Delete
+      </a>
     </td>
   </tr>
 );
@@ -25,39 +23,80 @@ export default class SubjectsList extends Component {
   constructor(props) {
     super(props);
 
-    this.deleteSubject = this.deleteSubject.bind(this);
+    this.deleteSubjects = this.deleteSubjects.bind(this);
+    this.onChangeSubject = this.onChangeSubject.bind(this);
 
-    this.state = { subjects: [] };
+    this.state = { 
+      subjects: [], 
+      subject: "" 
+    };
+    
+    
+
+    
   }
+
 
   componentDidMount() {
     axios
-      .get("http://localhost:4000/subjects/")
-      .then((response) => {
+      .get("http://localhost:7000/subjects/")
+      .then(response => {
         this.setState({ subjects: response.data });
       })
       .catch((error) => {
         console.log(error);
-      });
+      })
   }
 
-  deleteSubject(id) {
+  searchSubject(subject) {
     axios
-      .delete("http://localhost:4000/subjects/" + id)
-      .then((res) => console.log(res.data));
+      .get("http://localhost:7000/subjects/")
+      .then(response => {
+        this.setState({ subjects: response.data });
+        console.log(subject);
+        this.setState({
+        subjects: this.state.subjects.filter(el => el.subject === subject),
+      });
+      })
+
+      
+  }
+
+  deleteSubjects(id) {
+    axios
+      .delete("http://localhost:7000/subjects/" + id)
+      .then(res => console.log(res.data));
 
     this.setState({
-      subjects: this.state.subjects.filter((el) => el._id !== id),
+      subjects: this.state.subjects.filter(el => el._id !== id),
     });
   }
 
-  subjectList() {
-    return this.state.subjects.map((currentsubject) => {
+  onChangeSubject(e) {
+    this.setState({
+      subject: e.target.value,
+    }, this.submitChange);
+  }
+
+  submitChange() {
+    this.searchSubject(this.state.subject);
+  }
+
+  /*buttonClick() {
+    this.state({
+      searchSubject(subject);
+    })
+    this.searchSubject(this.state.subject);
+  }*/
+  
+
+  subjectsList() {
+    return this.state.subjects.map(currentSubject => {
       return (
         <Subject
-          subject={currentsubject}
-          deleteSubject={this.deleteSubject}
-          key={currentsubject._id}
+          subject={currentSubject}
+          deleteSubjects={this.deleteSubjects}
+          key={currentSubject._id}
         />
       );
     });
@@ -108,15 +147,13 @@ export default class SubjectsList extends Component {
               <option value="60">60</option>
             </select>
             </div>
-          
-    
               </th>
-
             </tr>
-          <tbody>{this.subjectList()}</tbody>
+          <tbody>{this.subjectsList()}</tbody>
         </table>
-        <div className="subject-btn"><button id="myBtn" onclick="javascript:alert('Hello World!')">Submit</button></div>
       </div>
-    );
+    )
   }
 }
+
+      
