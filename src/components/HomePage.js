@@ -34,26 +34,6 @@ export default class HomePage extends Component {
         
         </h3>
         <p></p>
-        <h4> 
-          <Link to="/signup">
-            <button className="Signup-btn" type="submit">Sign Up</button>
-          </Link>
-        </h4>
-        <div className="footer">
-        <h5>
-          <tr> _______Thank you for using Tutorfind______</tr>
-          </h5>
-          <h6>
-          <th><Link to="/contact" className="nav-link">
-                Contact
-              </Link>
-              </th>
-      </h6>
-        
-          
-          
-        </div>
-        
       </div>
       
      
