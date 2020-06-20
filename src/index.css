@@ -111,7 +111,6 @@ p{
     text-align: right;
     padding-bottom: 15%;
     padding-left: 90mm;
-    margin-left: 10em;
     margin-right: 10em;
 }
 
@@ -183,7 +182,12 @@ button {
     width: 100%;
     background-color: rgb(148, 144, 150);
     color: whitesmoke;
-    text-align: right;
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: .7;
+    
 }
 
 div {
@@ -195,13 +199,12 @@ div {
     opacity: 0.97;
 }
 .page2{
-    background-color: rgb(250, 194, 166);
-    text-align: left;
-    padding: 1em;
+    background-color: rgb(248, 202, 149);
     opacity: .6;
-    padding-left: 40em;
+    justify-content: right;
+    font-weight: 700;
 }
-th{
+.contact-info{
     background-color: rgb(142, 143, 143);
 
 }

@@ -61,6 +61,16 @@ function Navbar(props) {
             <th><button onClick={logOut}>Logout</button></th>
           </div>
         </div>
+
+        <div className="footer">
+          <div> Thank you for using Tutorfind</div>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <Link to="/contact"><button type="submit">Contact</button></Link>
+          &nbsp;&nbsp;
+          <Link to="/signup"><button type="submit">Sign Up</button></Link>
+        </div>
+         
+
       </nav>
     );
     }
