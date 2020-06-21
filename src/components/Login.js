@@ -22,7 +22,6 @@ function Login(props) {
         setLoggedIn(true);
       } else {
         setIsError(true);
-      //console.log(result.data.length);
         
       }
     }).catch(e => {

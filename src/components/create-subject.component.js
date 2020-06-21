@@ -19,37 +19,37 @@ export default class CreateSubjects extends Component {
       email: "",
       subject: "",
       description: "",
-      duration: 0,
+      duration: 0
     };
   }
 
   onChangeUsername(e) {
     this.setState({
-      username: e.target.value,
+      username: e.target.value
     });
   }
 
   onChangeEmail(e) {
     this.setState({
-      email: e.target.value,
+      email: e.target.value
     });
   }
 
   onChangeSubject(e) {
     this.setState({
-      subject: e.target.value,
+      subject: e.target.value
     });
   }
 
   onChangeDescription(e) {
     this.setState({
-      description: e.target.value,
+      description: e.target.value
     });
   }
 
   onChangeDuration(e) {
     this.setState({
-      duration: e.target.value,
+      duration: e.target.value
     });
   }
 
@@ -61,7 +61,7 @@ export default class CreateSubjects extends Component {
       email: this.state.email,
       subject: this.state.subject,
       description: this.state.description,
-      duration: this.state.duration,
+      duration: this.state.duration
     };
 
     console.log(subject);

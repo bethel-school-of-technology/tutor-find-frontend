@@ -8,9 +8,11 @@ function Navbar(props) {
   const { setAuthTokens } = useAuth();
 
   function logOut() {
+    if (localStorage.tokens != null) {
     setAuthTokens(null);
     localStorage.clear();
-    return <Redirect to="/home" />;
+    return alert("You are now Logged Out!");
+    }
   }
 
 

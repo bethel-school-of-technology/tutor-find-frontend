@@ -18,8 +18,7 @@ export default class EditSubject extends Component {
       email: "",
       subject: "",
       description: "",
-      duration: 0,
-      //users: []
+      duration: 0
     };
   }
 
@@ -32,55 +31,52 @@ export default class EditSubject extends Component {
           email: response.data.email,
           subject: response.data.subject,
           description: response.data.description,
-          duration: response.data.duration,
+          duration: response.data.duration
         });
       })
       .catch(function (error) {
         console.log(error);
       });
-
-    /*axios
-      .get("http://localhost:7000/subjects/")
-      .then(response => {
-        if (response.data.length > 0) {
-          this.setState({
-            users: response.data.map(user => user.subject),
-          });
-        }
-      })
-      .catch(error => {
-        console.log(error);
-      });*/
   }
 
   onChangeUsername(e) {
     this.setState({
-      username: e.target.value,
-    });
+      username: e.target.value
+    }, () => {
+      console.log(this.state.username)}
+      );
   }
 
   onChangeEmail(e) {
     this.setState({
-      email: e.target.value,
-    });
+      email: e.target.value
+    }, () => {
+      console.log(this.state.email)}
+      );
   }
 
   onChangeSubject(e) {
     this.setState({
-      subject: e.target.value,
-    });
+      subject: e.target.value
+    }, () => {
+      console.log(this.state.subject)}
+      );
   }
 
   onChangeDescription(e) {
     this.setState({
-      description: e.target.value,
-    });
+      description: e.target.value
+    }, () => {
+      console.log(this.state.description)}
+      );
   }
 
   onChangeDuration(e) {
     this.setState({
-      duration: e.target.value,
-    });
+      duration: e.target.value
+    }, () => {
+      console.log(this.state.duration)}
+      );
   }
 
   onSubmit(e) {
@@ -91,16 +87,13 @@ export default class EditSubject extends Component {
       email:this.state.email,
       subject: this.state.subject,
       description: this.state.description,
-      duration: this.state.duration,
+      duration: this.state.duration
     };
 
     console.log(subject);
 
     axios
-      .post(
-        "http://localhost:7000/subjects/update/" + this.props.match.params.id,
-        subject
-      )
+      .post("http://localhost:7000/subjects/update/" + this.props.match.params.id, subject)
       .then((res) => console.log(res.data));
 
     window.location = "/sessions";
