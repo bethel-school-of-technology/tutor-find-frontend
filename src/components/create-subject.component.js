@@ -8,6 +8,7 @@ export default class CreateSubjects extends Component {
     super(props);
 
     this.onChangeUsername = this.onChangeUsername.bind(this);
+    this.onChangeEmail = this.onChangeEmail.bind(this);
     this.onChangeSubject = this.onChangeSubject.bind(this);
     this.onChangeDescription = this.onChangeDescription.bind(this);
     this.onChangeDuration = this.onChangeDuration.bind(this);
@@ -15,6 +16,7 @@ export default class CreateSubjects extends Component {
 
     this.state = {
       username: "",
+      email: "",
       subject: "",
       description: "",
       duration: 0,
@@ -24,6 +26,12 @@ export default class CreateSubjects extends Component {
   onChangeUsername(e) {
     this.setState({
       username: e.target.value,
+    });
+  }
+
+  onChangeEmail(e) {
+    this.setState({
+      email: e.target.value,
     });
   }
 
@@ -50,6 +58,7 @@ export default class CreateSubjects extends Component {
 
     const subject = {
       username: this.state.username,
+      email: this.state.email,
       subject: this.state.subject,
       description: this.state.description,
       duration: this.state.duration,
@@ -77,7 +86,7 @@ export default class CreateSubjects extends Component {
         </div>
         <form onSubmit={this.onSubmit}>
           <div className="form-group'">
-            <label>Username: </label>
+            <label>Name: </label>
             <input
               type="text"
               required
@@ -86,7 +95,18 @@ export default class CreateSubjects extends Component {
               onChange={this.onChangeUsername}
             />
           </div>
-
+          <br></br>
+          <div className="form-group'">
+            <label>Contact: </label>
+            <input
+              type="text"
+              required
+              className="form-control"
+              value={this.state.email}
+              onChange={this.onChangeEmail}
+            />
+          </div>
+          <br></br>
           <div className="form-group">
             <label>Subject: </label>
             <select

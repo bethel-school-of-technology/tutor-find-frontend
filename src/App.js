@@ -37,10 +37,10 @@ function App(props) {
         <Navbar />
         <br />
         <Route path="/" exact component={HomePage} />
-        <PrivateRoute path="/subjects-list" component={SubjectList} />
+        <Route path="/subjects-list" component={SubjectList} />
         <PrivateRoute path="/edit/:id" component={EditSubject} />
         <PrivateRoute path="/create" component={CreateSubject} />
-        <PrivateRoute path="/sessions" exact component={SessionsList} />
+        <Route path="/sessions" exact component={SessionsList} />
         <Route path="/signup" exact component={Signup} />
         <Route path="/login" exact component={Login} />
         <Route path="/contact" exact component={Contact} />

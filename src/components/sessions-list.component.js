@@ -5,6 +5,7 @@ import axios from "axios";
 const Subject = props => (
   <tr>
     <td>{props.subject.username}</td>
+    <td>{props.subject.email}</td>
     <td>{props.subject.subject}</td>
     <td>{props.subject.description}</td>
     <td>{props.subject.duration}</td>
@@ -72,7 +73,8 @@ export default class SubjectsList extends Component {
         <table className="table">
           <thead className="thead-light">
             <tr>
-              <th> Username </th>
+              <th>Name</th>
+              <th>Contact</th>
               <th> Subject</th>
               <th> Description </th>
               <th> Minutes</th>

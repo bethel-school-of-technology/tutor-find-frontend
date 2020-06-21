@@ -7,6 +7,7 @@ export default class EditSubject extends Component {
     super(props);
 
     this.onChangeUsername = this.onChangeUsername.bind(this);
+    this.onChangeEmail = this.onChangeEmail.bind(this);
     this.onChangeSubject = this.onChangeSubject.bind(this);
     this.onChangeDescription = this.onChangeDescription.bind(this);
     this.onChangeDuration = this.onChangeDuration.bind(this);
@@ -14,6 +15,7 @@ export default class EditSubject extends Component {
 
     this.state = {
       username: "",
+      email: "",
       subject: "",
       description: "",
       duration: 0,
@@ -27,6 +29,7 @@ export default class EditSubject extends Component {
       .then((response) => {
         this.setState({
           username: response.data.username,
+          email: response.data.email,
           subject: response.data.subject,
           description: response.data.description,
           duration: response.data.duration,
@@ -56,6 +59,12 @@ export default class EditSubject extends Component {
     });
   }
 
+  onChangeEmail(e) {
+    this.setState({
+      email: e.target.value,
+    });
+  }
+
   onChangeSubject(e) {
     this.setState({
       subject: e.target.value,
@@ -79,6 +88,7 @@ export default class EditSubject extends Component {
 
     const subject = {
       username: this.state.username,
+      email:this.state.email,
       subject: this.state.subject,
       description: this.state.description,
       duration: this.state.duration,
@@ -102,15 +112,27 @@ export default class EditSubject extends Component {
         <h3>Edit Subject List</h3>
         <form onSubmit={this.onSubmit}>
           <div className="form-group">
-            <label>Username: </label>
+            <label>Name: </label>
             <input
               type="text"
               required
               className="form-control"
               value={this.state.username}
               onChange={this.onChangeUsername}
+            /> 
+            </div>
+            
+            <div className="form-group'">
+            <label>Contact: </label>
+            <input
+              type="text"
+              required
+              className="form-control"
+              value={this.state.email}
+              onChange={this.onChangeEmail}
             />
           </div>
+          <br></br>
           <div className="form-group">
             <label>Subject: </label>
             <select
@@ -125,6 +147,7 @@ export default class EditSubject extends Component {
               <option value="English">English</option>
             </select>
           </div>
+
           <div className="form-group">
             <label>Description: </label>
             <textarea
@@ -136,6 +159,7 @@ export default class EditSubject extends Component {
               onChange={this.onChangeDescription}
             />
           </div>
+
           <div className="form-group">
             <label>Duration (in minutes): </label>
             <input
