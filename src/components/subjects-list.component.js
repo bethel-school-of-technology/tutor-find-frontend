@@ -25,10 +25,14 @@ export default class SubjectsList extends Component {
 
     this.deleteSubjects = this.deleteSubjects.bind(this);
     this.onChangeSubject = this.onChangeSubject.bind(this);
+    this.onChangeDuration = this.onChangeDuration.bind(this);
+    this.buttonClick = this.buttonClick.bind(this);
+    
 
     this.state = { 
       subjects: [], 
-      subject: "" 
+      subject: "" ,
+      duration: ""
     };
     
     
@@ -48,14 +52,20 @@ export default class SubjectsList extends Component {
       })
   }
 
-  searchSubject(subject) {
+  searchSubject(subj, dur) {
     axios
       .get("http://localhost:7000/subjects/")
       .then(response => {
         this.setState({ subjects: response.data });
-        console.log(subject);
+        console.log(response.data);
+        console.log(subj, dur);
         this.setState({
-        subjects: this.state.subjects.filter(el => el.subject === subject),
+        subjects: this.state.subjects.filter(el => {
+          return (
+          el.subject === subj
+          && 
+          el.duration === dur
+        )})
       });
       })
 
@@ -74,12 +84,23 @@ export default class SubjectsList extends Component {
 
   onChangeSubject(e) {
     this.setState({
-      subject: e.target.value,
-    }, this.submitChange);
+      subject: e.target.value
+    }, () => {
+      console.log(this.state.subject)}
+      );
   }
 
-  submitChange() {
-    this.searchSubject(this.state.subject);
+  onChangeDuration(e) {
+    this.setState({
+      duration: e.target.value
+    }, () => {
+      console.log(this.state.duration)}
+      );
+  }
+
+  buttonClick() {
+    this.searchSubject(this.state.subject, this.state.duration);
+
   }
 
   /*buttonClick() {
@@ -107,7 +128,7 @@ export default class SubjectsList extends Component {
       <div className="page">
         <h3 style= {{ textAlign: "center"}}>Search for Tutor Services</h3>
         
-        <table className="table" style={{ justifyContent: "right" }}>
+        <table className="table">
       
          
         <tr className="thead-light">
@@ -135,8 +156,8 @@ export default class SubjectsList extends Component {
             <label>Duration: </label>
             <select
               className="form-control"
-              value={this.state.subject}
-              onChange={this.onChangeSubject}
+              value={this.state.duration}
+              onChange={this.onChangeDuration}
             >
               <option selected>Choose...</option>
              
@@ -147,10 +168,14 @@ export default class SubjectsList extends Component {
               <option value="60">60</option>
             </select>
             </div>
+            <div style={{textAlign: "center"}}>
+              <button onClick={this.buttonClick} className="searchButton">Submit</button>
+              </div>
               </th>
             </tr>
+            <div>
           <tbody>{this.subjectsList()}</tbody>
-        </table>
+        </div></table>
       </div>
     )
   }

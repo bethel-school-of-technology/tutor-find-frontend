@@ -409,3 +409,9 @@ h6{
     margin: 70em;
     text-shadow: 3px 3px black;
 }
+
+.searchButton {
+    display: block;
+    width: 100%;
+    background-color: azure;
+}
