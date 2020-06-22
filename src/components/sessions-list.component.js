@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-const Subject = props => (
+const Subject = (props) => (
   <tr>
     <td>{props.subject.username}</td>
     <td>{props.subject.email}</td>
@@ -11,9 +11,12 @@ const Subject = props => (
     <td>{props.subject.duration}</td>
     <td>
       <Link to={"/edit/" + props.subject._id}>Edit</Link>&nbsp;|&nbsp;
-      <a href="#"
-      onClick={() => { props.deleteSubjects(props.subject._id) 
-      }}>
+      <a
+        href="#"
+        onClick={() => {
+          props.deleteSubjects(props.subject._id);
+        }}
+      >
         Delete
       </a>
     </td>
@@ -27,34 +30,35 @@ export default class SubjectsList extends Component {
     this.deleteSubjects = this.deleteSubjects.bind(this);
 
     this.state = { subjects: [] };
-
-    
   }
-
 
   componentDidMount() {
     axios
       .get("http://localhost:7000/subjects/")
-      .then(response => {
+      .then((response) => {
         this.setState({ subjects: response.data });
       })
       .catch((error) => {
         console.log(error);
-      })
+      });
   }
 
   deleteSubjects(id) {
-    axios
-      .delete("http://localhost:7000/subjects/" + id)
-      .then(res => console.log(res.data));
+    if (localStorage.tokens != null) {
+      axios
+        .delete("http://localhost:7000/subjects/" + id)
+        .then((res) => console.log(res.data));
 
-    this.setState({
-      subjects: this.state.subjects.filter(el => el._id !== id),
-    });
+      this.setState({
+        subjects: this.state.subjects.filter((el) => el._id !== id),
+      });
+    } else{
+      alert('You must be a Tutor to delete!')
+    }
   }
 
   subjectsList() {
-    return this.state.subjects.map(currentSubject => {
+    return this.state.subjects.map((currentSubject) => {
       return (
         <Subject
           subject={currentSubject}
@@ -81,9 +85,7 @@ export default class SubjectsList extends Component {
               <th>Actions</th>
             </tr>
           </thead>
-            <tbody>
-              {this.subjectsList()}
-            </tbody>
+          <tbody>{this.subjectsList()}</tbody>
         </table>
       </div>
     );

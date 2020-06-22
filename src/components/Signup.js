@@ -42,7 +42,7 @@ function Login() {
           onChange={e => {
             setUserName(e.target.value);
           }}
-          placeholder="email"
+          placeholder="Email"
         />
         <Input
           type="password"
@@ -50,7 +50,7 @@ function Login() {
           onChange={e => {
             setPassword(e.target.value);
           }}
-          placeholder="password"
+          placeholder="Password"
         />
         <Button onClick={postSignup}>Sign Up</Button>
       </Form>

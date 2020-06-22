@@ -43,7 +43,7 @@ function Login(props) {
           onChange={e => {
             setUserName(e.target.value);
           }}
-          placeholder="email"
+          placeholder="Email"
         />
         <Input
           type="password"
@@ -51,9 +51,9 @@ function Login(props) {
           onChange={e => {
             setPassword(e.target.value);
           }}
-          placeholder="password"
+          placeholder="Password"
         />
-        <Button onClick={postLogin}>Sign In</Button>
+        <Button onClick={postLogin}>Log In</Button>
       </Form>
       <Link to="/signup">Don't have an account?</Link>
         { isError &&<Error>The username or password provided were incorrect!</Error> }
