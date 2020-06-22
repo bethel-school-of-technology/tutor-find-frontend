@@ -8,6 +8,7 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 5em;
 `;
 
 const Form = styled.div`

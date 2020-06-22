@@ -8,9 +8,11 @@ export default class HomePage extends Component {
 
       <div>
         <table className="page2">
-          <th className="contact-info" >Contact Us:</th>
+        <div className="contact-border">
+          <th className="contact-info" style={{textDecoration: "underline"}}>Contact Us</th>
           <tr>Email: Tutorfind@Awesome.com</tr>
           <tr>Phone: (777) 777-7777</tr>
+          </div>
         </table>
 
       </div>

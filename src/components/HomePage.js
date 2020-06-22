@@ -25,23 +25,25 @@ export default class HomePage extends Component {
         <h3 className="text">
           {" "}
           The goal is to bring people together in their communities with common
-          interests, peace and the love for helping people. <p></p>
-          {" "}
+          interests, peace and the love for helping people. <p></p>{" "}
         </h3>
         <h3 className="text">
-        {"  "}
-        Connect with a tutor today and be on your way to sucess.
-        
+          {"  "}
+          Connect with a tutor today and be on your way to sucess.
         </h3>
         <p></p>
+        <div className="footer">
+          <div> Thank you for using Tutorfind</div>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <Link to="/contact">
+            <button type="submit">Contact</button>
+          </Link>
+          &nbsp;&nbsp;
+          <Link to="/signup">
+            <button type="submit">Sign Up</button>
+          </Link>
+        </div>
       </div>
-      
-     
     );
-    
   }
 }
-
-
-   
-
