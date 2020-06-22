@@ -1,22 +1,24 @@
 * {
-    color: rgb(15, 15, 15);
+  color: rgb(15, 15, 15);
 }
 
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-image: url("https://p0.pxfuel.com/preview/745/1018/433/aerial-background-empty-blogger.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url("https://p0.pxfuel.com/preview/745/1018/433/aerial-background-empty-blogger.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
-
 
 /* h3 {
     font-size: small;
@@ -24,87 +26,85 @@ code {
 } */
 
 myInput {
-    background-image: url("/css/searchicon.png");
-    /* Add a search icon to input */
-    background-position: 10px 12px;
-    /* Position the search icon */
-    background-repeat: no-repeat;
-    /* Do not repeat the icon image */
-    width: 100%;
-    /* Full-width */
-    font-size: 16px;
-    /* Increase font-size */
-    padding: 12px 20px 12px 40px;
-    /* Add some padding */
-    border: 1px solid #ddd;
-    /* Add a grey border */
-    margin-bottom: 12px;
-    /* Add some space below the input */
+  background-image: url("/css/searchicon.png");
+  /* Add a search icon to input */
+  background-position: 10px 12px;
+  /* Position the search icon */
+  background-repeat: no-repeat;
+  /* Do not repeat the icon image */
+  width: 100%;
+  /* Full-width */
+  font-size: 16px;
+  /* Increase font-size */
+  padding: 12px 20px 12px 40px;
+  /* Add some padding */
+  border: 1px solid #ddd;
+  /* Add a grey border */
+  margin-bottom: 12px;
+  /* Add some space below the input */
 }
 
 ul {
-    font-size: medium;
+  font-size: medium;
 }
 
 .navbar {
-    margin-left: calc(50% - 50vw);
-    width: 100vw;
-    display: flex;
-    position: fixed;
+  margin-left: calc(50% - 50vw);
+  width: 100vw;
+  display: flex;
+  position: fixed;
 }
 
 .navbar-nav {
-    width: 100%;
-    height: 2em;
-    justify-content: center;
-    
+  width: 100%;
+  height: 2em;
+  justify-content: center;
 }
 
 .navbar-item {
-    background-color: rgb(153, 149, 147);
-    font-size: large;
-    padding-right: 50px;
-    padding-left: 20px;
-    padding-top: 0%;
+  background-color: rgb(153, 149, 147);
+  font-size: large;
+  padding-right: 50px;
+  padding-left: 20px;
+  padding-top: 0%;
 }
 
 .navbar-item:hover {
-    background-color: navajowhite;
+  background-color: navajowhite;
 }
 
 .navimg {
-    height: 4em;
-    width: 4em;
-    justify-content: left;
+  height: 4em;
+  width: 4em;
+  justify-content: left;
 }
 
 .nav-sticky {
-    display: flex;
-    position: fixed;
-    width: 100%;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 100;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 }
 
 .Logins {
-    justify-content: right;
+  justify-content: right;
 }
 
 li {
-    background-color: rgb(144, 212, 212);
-    text-align: right;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
+  background-color: rgb(144, 212, 212);
+  text-align: right;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
 h3 {
-    font-style: italic;
-    font-size: small;
+  font-style: italic;
+  font-size: small;
 }
-
 
 /* 
 p{
@@ -113,326 +113,320 @@ p{
 } */
 
 .page {
-    background-color: rgb(241, 239, 239);
-    opacity: 0.97;
-    padding: 2em;
-    margin-top: 4em;
+  background-color: rgb(241, 239, 239);
+  opacity: 0.97;
+  padding: 2em;
+  margin-top: 4em;
 }
 
 .homepage {
-    background-color: transparent;
-    opacity: 0.6;
-    text-align: right;
-    padding-bottom: 15%;
-    padding-left: 90mm;
-    margin-right: 10em;
-    margin-bottom: 10em;
-    margin-top: 5em;
+  opacity: 0.6;
+  text-align: right;
+  padding-left: 90mm;
+  margin-right: 10em;
+  margin-top: 5em;
 }
 
 ul {
-    font-family: monospace;
-    font-size: 20px;
-    background-color: transparent;
+  font-family: monospace;
+  font-size: 20px;
+  background-color: transparent;
 }
 
 .text {
-    background-color: rgb(247, 245, 243);
-    display: table;
-    padding: 2px;
-    padding-bottom: 5%;
-    float: right;
-    text-align: center;
-    font-size: larger;
-    opacity: 0.7;
+  background-color: rgb(247, 245, 243);
+  display: table;
+  padding: 2px;
+  padding-bottom: 5%;
+  float: right;
+  text-align: center;
+  font-size: larger;
+  opacity: 0.7;
 }
 
 .joe {
-    text-align: center;
-    font-weight: 400;
-    color: rgb(243, 245, 245);
-    text-shadow: 10px 10px rgb(10, 10, 10);
-    padding: 15px;
+  text-align: center;
+  font-weight: 400;
+  color: rgb(243, 245, 245);
+  text-shadow: 10px 10px rgb(10, 10, 10);
+  padding: 15px;
 }
 
 .chris {
-    text-align: center;
-    font-style: normal;
-    font-weight: 600;
-    color: rgb(135, 241, 241);
-    text-shadow: 3px 3px black;
-    padding: 20px;
-    padding-block-start: 10%;
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+  color: rgb(135, 241, 241);
+  text-shadow: 3px 3px black;
+  padding: 20px;
+  padding-block-start: 10%;
 }
 
 .kyle {
-    text-align: center;
-    background-color: #fccd15ee;
-    display: table;
-    margin: 0px auto 0px auto;
-    padding: 15px;
+  text-align: center;
+  background-color: #fccd15ee;
+  display: table;
+  margin: 0px auto 0px auto;
+  padding: 15px;
 }
 
 .create-header {
-    text-align: center;
+  text-align: center;
 }
 
 .Signup-btn {
-    text-align: right;
-    background-color: white;
-    font-size: medium;
+  text-align: right;
+  background-color: white;
+  font-size: medium;
 }
 
 button {
-    background-color: rgb(244, 247, 248);
+  background-color: rgb(244, 247, 248);
 }
 
 .subject-btn {
-    text-align: center;
+  text-align: center;
 }
 
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: rgb(148, 144, 150);
-    color: whitesmoke;
-    height: 4em;
-    text-align: center;
-    opacity: .7;
-    
+.h-footer {
+  background-color: rgb(247, 245, 243);
+  position: absolute;
+  left: 0;
+  right: 0;
+  float: right;
+  text-align: center;
+  font-size: larger;
+  opacity: 0.7;
+  margin-top: 19em;
+  padding: .5em;
 }
 
 div {
-    font-size: medium;
+  font-size: medium;
 }
 
 .page {
-    background-color: rgb(193, 200, 204);
-    opacity: 0.97;
+  background-color: rgb(193, 200, 204);
+  opacity: 0.97;
 }
-.page2{
-    background-color: rgb(248, 202, 149);
-    margin-top: 8em;
-    margin-left: 33em;
-    opacity: .6;
-    justify-content: right;
-    font-weight: 700;
-    text-align: center;
+.page2 {
+  background-color: rgb(248, 202, 149);
+  margin-top: 8em;
+  margin-left: 33em;
+  opacity: 0.6;
+  justify-content: right;
+  font-weight: 700;
+  text-align: center;
 }
-.contact-info{
-    background-color: rgb(142, 143, 143);
+.contact-info {
+  background-color: rgb(142, 143, 143);
 }
 .contact-border {
-    border: solid;
-    font-size: x-large;
-
+  border: solid;
+  font-size: x-large;
 }
-tr{
-    color: rgb(31, 32, 32);
-    text-shadow: 3px 2px rgb(149, 153, 155);
+tr {
+  color: rgb(31, 32, 32);
+  text-shadow: 3px 2px rgb(149, 153, 155);
 }
-
 
 /* FOR CHAT */
 
 :root {
-    --main-color: #5ea3d0;
-    --secondary-color: white;
-    --main-text-color: #3e5869;
-    --secondary-text-color: #b0c7d6;
-    --send-message-form: #f5f5f5;
+  --main-color: #5ea3d0;
+  --secondary-color: white;
+  --main-text-color: #3e5869;
+  --secondary-text-color: #b0c7d6;
+  --send-message-form: #f5f5f5;
 }
 
 html,
 body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: system-ui;
-    font-weight: 200;
-    color: #3e5869;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui;
+  font-weight: 200;
+  color: #3e5869;
 }
 
 #root {
-    height: 100%;
+  height: 100%;
 }
 
 .app {
-    display: grid;
-    height: 100%;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 60px;
-    grid-template-areas: "r m m m m m" "r m m m m m" "r m m m m m" "r m m m m m" "r m m m m m" "n f f f f f";
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 60px;
+  grid-template-areas: "r m m m m m" "r m m m m m" "r m m m m m" "r m m m m m" "r m m m m m" "n f f f f f";
 }
 
 .new-room-form {
-    grid-area: n;
+  grid-area: n;
 }
 
 .rooms-list {
-    grid-area: r;
+  grid-area: r;
 }
 
 .message-list {
-    grid-area: m;
+  grid-area: m;
 }
 
 .send-message-form {
-    grid-area: f;
+  grid-area: f;
 }
 
 .rooms-list {
-    box-sizing: border-box;
-    padding: 10px;
-    background-color: var(--main-color);
-    overflow: scroll;
-    height: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: var(--main-color);
+  overflow: scroll;
+  height: 100%;
 }
 
-.rooms-list>ul {
-    list-style-type: none;
-    padding: 0;
-    overflow: scoll;
+.rooms-list > ul {
+  list-style-type: none;
+  padding: 0;
+  overflow: scoll;
 }
 
 .rooms-list li {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
-.rooms-list>h3 {
-    margin: 5px 0;
-    color: var(--secondary-color);
+.rooms-list > h3 {
+  margin: 5px 0;
+  color: var(--secondary-color);
 }
 
 .rooms-list .room a {
-    color: var(--secondary-text-color);
-    font-weight: 600;
-    text-decoration: none;
+  color: var(--secondary-text-color);
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .rooms-list .room.active a {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 .new-room-form {
-    padding: 0 5px;
-    background: var(--secondary-color);
-    color: var(--main-text-color);
+  padding: 0 5px;
+  background: var(--secondary-color);
+  color: var(--main-text-color);
 }
 
 .new-room-form form {
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .new-room-form input {
-    width: 135px;
-    background: var(--secondary-color);
+  width: 135px;
+  background: var(--secondary-color);
 }
 
 .new-room-form button {
-    background: var(--secondary-color);
-    color: var(--main-text-color);
-    border: 0;
+  background: var(--secondary-color);
+  color: var(--main-text-color);
+  border: 0;
 }
 
 .new-room-form input::placeholder {
-    color: var(--main-text-color);
-    font-weight: 200;
+  color: var(--main-text-color);
+  font-weight: 200;
 }
 
 .new-room-form input:focus {
-    outline-width: 0;
+  outline-width: 0;
 }
 
 .new-room-form input {
-    border: 0;
+  border: 0;
 }
 
 .new-room-form button {
-    border: 0;
+  border: 0;
 }
 
 .message {
-    margin: 15px 0;
+  margin: 15px 0;
 }
 
 .message .message-username {
-    font-size: 11px;
-    color: var(--main-text-color);
-    opacity: 0.9;
-    margin-bottom: 6px;
+  font-size: 11px;
+  color: var(--main-text-color);
+  opacity: 0.9;
+  margin-bottom: 6px;
 }
 
 .message .message-text {
-    background: var(--main-color);
-    color: var(--secondary-color);
-    display: inline;
-    padding: 4px 8px;
-    border-radius: 8px;
+  background: var(--main-color);
+  color: var(--secondary-color);
+  display: inline;
+  padding: 4px 8px;
+  border-radius: 8px;
 }
 
 .message-list {
-    box-sizing: border-box;
-    padding-left: 6px;
-    width: 100%;
-    height: 100%;
-    overflow: scroll;
-    background: var(--secondary-color);
+  box-sizing: border-box;
+  padding-left: 6px;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background: var(--secondary-color);
 }
 
 .message-list .join-room {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    font-size: 34px;
-    font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 34px;
+  font-weight: 300;
 }
 
 .send-message-form {
-    background: var(--send-message-form);
-    display: flex;
+  background: var(--send-message-form);
+  display: flex;
 }
 
 .send-message-form input {
-    width: 100%;
-    padding: 15px 10px;
-    margin: 0;
-    border-style: none;
-    background: var(--send-message-form);
-    font-weight: 200;
+  width: 100%;
+  padding: 15px 10px;
+  margin: 0;
+  border-style: none;
+  background: var(--send-message-form);
+  font-weight: 200;
 }
 
 .send-message-form input:focus {
-    outline-width: 0;
+  outline-width: 0;
 }
 
 .send-message-form input::placeholder {
-    color: var(--main-text-color);
+  color: var(--main-text-color);
 }
 
 .help-text {
-    position: absolute;
-    top: 10px;
+  position: absolute;
+  top: 10px;
 }
-h5{
-    background-color: rgb(248, 200, 68);
-    padding: em;
-    margin: em;
+h5 {
+  background-color: rgb(248, 200, 68);
+  padding: em;
+  margin: em;
 }
-h6{
-    margin: 70em;
-    text-shadow: 3px 3px black;
+h6 {
+  margin: 70em;
+  text-shadow: 3px 3px black;
 }
 
 .searchButton {
-    display: block;
-    width: 100%;
-    background-color: azure;
+  display: block;
+  width: 100%;
+  background-color: azure;
 }
-

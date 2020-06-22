@@ -32,8 +32,14 @@ export default class HomePage extends Component {
           Connect with a tutor today and be on your way to sucess.
         </h3>
         <p></p>
-        <div className="footer">
-          <div> Thank you for using Tutorfind</div>
+        <footer className="h-footer">
+          <div> &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          Thank you for using Tutorfind
           &nbsp;&nbsp;&nbsp;&nbsp;
           <Link to="/contact">
             <button type="submit">Contact</button>
@@ -42,7 +48,8 @@ export default class HomePage extends Component {
           <Link to="/signup">
             <button type="submit">Sign Up</button>
           </Link>
-        </div>
+          </div>
+        </footer>
       </div>
     );
   }
