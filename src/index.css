@@ -62,7 +62,7 @@ ul {
 }
 
 .navbar-item {
-  background-color: rgb(153, 149, 147);
+  background-color: rgb(167, 165, 164);
   font-size: large;
   padding-right: 50px;
   padding-left: 20px;
@@ -70,15 +70,30 @@ ul {
 }
 
 .navbar-item:hover {
-  background-color: navajowhite;
+  background-color: rgb(216, 191, 81);
 }
 
 .navimg {
-  height: 4em;
-  width: 4em;
+  height: 3em;
+  width: 3em;
   justify-content: left;
+ 
+}
+.navimg2{
+    height: 11em;
+    width: 11em;
+    opacity: .9;
+    margin-left: 450px;
+    margin-top: -440px;
+    padding: 12px;
+    
+
 }
 
+tr{
+    background-color: rgb(147, 148, 146);
+
+}
 .nav-sticky {
   display: flex;
   position: fixed;
@@ -122,9 +137,9 @@ p{
 .homepage {
   opacity: 0.6;
   text-align: right;
-  padding-left: 90mm;
-  margin-right: 10em;
-  margin-top: 5em;
+  padding-left: 100mm;
+  margin-left: 10em;
+  margin-top: 10em;
 }
 
 ul {
@@ -137,12 +152,17 @@ ul {
   background-color: rgb(247, 245, 243);
   display: table;
   padding: 2px;
-  padding-bottom: 5%;
+  padding-bottom: 2%;
   float: right;
   text-align: center;
   font-size: larger;
   opacity: 0.7;
 }
+.text2{
+text-align: center;
+}
+
+
 
 .joe {
   text-align: center;
@@ -210,25 +230,32 @@ div {
   opacity: 0.97;
 }
 .page2 {
-  background-color: rgb(248, 202, 149);
-  margin-top: 8em;
-  margin-left: 33em;
-  opacity: 0.6;
+  background-color: rgb(151, 155, 155);
+  margin-top: 10em;
+  margin-left: 40em;
+  margin-bottom: 130px;
+  opacity: 0.7;
   justify-content: right;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
 }
+
 .contact-info {
-  background-color: rgb(142, 143, 143);
+  background-color: rgb(150, 155, 155);
+  padding-top: 10px;
+  padding-inline-end: 10px;
+  padding-bottom: 5px;
+  justify-content: center;
 }
 .contact-border {
   border: solid;
   font-size: x-large;
+  padding: 5px;
 }
-tr {
+/* tr {
   color: rgb(31, 32, 32);
   text-shadow: 3px 2px rgb(149, 153, 155);
-}
+} */
 
 /* FOR CHAT */
 
@@ -422,7 +449,7 @@ h5 {
 }
 h6 {
   margin: 70em;
-  text-shadow: 3px 3px black;
+  text-shadow: 3px 3px rgb(10, 10, 10);
 }
 
 .searchButton {
