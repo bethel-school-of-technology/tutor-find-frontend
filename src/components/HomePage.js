@@ -15,7 +15,7 @@ export default class HomePage extends Component {
         <h3 className="chris">TUTORFIND</h3>
         <h3 className="text">
           This site is a fanastic new platform for people in the communicty to connect with
-          each other.   
+          each other.
         </h3>
         <h3 className="text">
           {" "}
@@ -29,10 +29,10 @@ export default class HomePage extends Component {
         </h3>
         <h3 className="text">
           {"  "}
-          If you are a student of any kind, sign up and connect with a tutor today or if you are a tutor login and start connecting with students. Its a great way to practise your tutoring skills. 
+          If you are a student of any kind, sign up and connect with a tutor today or if you are a tutor login and start connecting with students. Its a great way to practise your tutoring skills.
         </h3>
         <h3 className="text2">
-          {"  "} 
+          {"  "}
           Sign up or Log in today.
           </h3>
         <p></p>
@@ -46,12 +46,12 @@ export default class HomePage extends Component {
           Thank you for using Tutorfind
           &nbsp;&nbsp;&nbsp;&nbsp;
           <Link to="/contact">
-            <button type="submit">Contact</button>
-          </Link>
+              <button type="submit">Contact</button>
+            </Link>
           &nbsp;&nbsp;
           <Link to="/signup">
-            <button type="submit">Sign Up</button>
-          </Link>
+              <button type="submit">Sign Up</button>
+            </Link>
           </div>
         </footer>
       </div>

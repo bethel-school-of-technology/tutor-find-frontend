@@ -38,53 +38,53 @@ function Navbar(props) {
         </th>
       );
     } else {
-      return [b , c];
+      return [b, c];
     }
   }
 
   return (
     <div className="nav-sticky">
-    <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
-      <div className="collpase navbar-collapse">
-        <img
-          className="navimg"
-          src="https://i.ibb.co/YZDRqDw/tutorfindlogo.jpg"
-        />
-        <ul className="navbar-nav mr-auto">
-          <li className="navbar-item">
-            <Link to="/" className="nav-link">
-              Home
+      <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
+        <div className="collpase navbar-collapse">
+          <img
+            className="navimg"
+            src="https://i.ibb.co/YZDRqDw/tutorfindlogo.jpg"
+          />
+          <ul className="navbar-nav mr-auto">
+            <li className="navbar-item">
+              <Link to="/" className="nav-link">
+                Home
             </Link>
-          </li>
+            </li>
 
-          <li className="navbar-item">
-            <Link to="/subjects-list" className="nav-link">
-              Search
+            <li className="navbar-item">
+              <Link to="/subjects-list" className="nav-link">
+                Search
             </Link>
-          </li>
+            </li>
 
-          <li className="navbar-item">
-            <Link to="/sessions" className="nav-link">
-              {" "}
+            <li className="navbar-item">
+              <Link to="/sessions" className="nav-link">
+                {" "}
               Tutor Services
             </Link>
-          </li>
+            </li>
 
-          <li className="navbar-item">
-            <Link to="/create" className="nav-link">
-              Post
+            <li className="navbar-item">
+              <Link to="/create" className="nav-link">
+                Post
             </Link>
-          </li>
+            </li>
 
-          <li className="navbar-item">
-            <Link to="/contact" className="nav-link">
-              Contact
+            <li className="navbar-item">
+              <Link to="/contact" className="nav-link">
+                Contact
             </Link>
-          </li>
-        </ul>
-        <div className="Logins">{logins()}</div>
-      </div>
-    </nav>
+            </li>
+          </ul>
+          <div className="Logins">{logins()}</div>
+        </div>
+      </nav>
     </div>
   );
 }
