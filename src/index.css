@@ -20,10 +20,7 @@ code {
     monospace;
 }
 
-/* h3 {
-    font-size: small;
-    font-style: italic;
-} */
+
 
 myInput {
   background-image: url("/css/searchicon.png");
@@ -121,11 +118,7 @@ h3 {
   font-size: small;
 }
 
-/* 
-p{
-  font-weight: 400;
 
-} */
 
 .page {
   background-color: rgb(241, 239, 239);
@@ -252,10 +245,22 @@ div {
   font-size: x-large;
   padding: 5px;
 }
-/* tr {
-  color: rgb(31, 32, 32);
-  text-shadow: 3px 2px rgb(149, 153, 155);
-} */
+h5 {
+  background-color: rgb(248, 200, 68);
+  padding: em;
+  margin: em;
+}
+h6 {
+  margin: 70em;
+  text-shadow: 3px 3px rgb(10, 10, 10);
+}
+
+.searchButton {
+  display: block;
+  width: 100%;
+  background-color: azure;
+}
+
 
 /* FOR CHAT */
 
@@ -442,18 +447,6 @@ body {
   position: absolute;
   top: 10px;
 }
-h5 {
-  background-color: rgb(248, 200, 68);
-  padding: em;
-  margin: em;
-}
-h6 {
-  margin: 70em;
-  text-shadow: 3px 3px rgb(10, 10, 10);
-}
+/* End of chat styling , i think  */
 
-.searchButton {
-  display: block;
-  width: 100%;
-  background-color: azure;
-}
+
